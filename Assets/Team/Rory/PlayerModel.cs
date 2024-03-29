@@ -13,6 +13,8 @@ public class PlayerModel : MonoBehaviour
     public float fakeDrag;
     public Rigidbody rb;
     public bool moving;
+    public bool dragOn;
+    public float maxSpeed;
     public void Horizontal(float value)
     {
         desiredDirection.x = value;
@@ -24,30 +26,40 @@ public class PlayerModel : MonoBehaviour
 
     void Update()
     {
-        var TempDirection = new Vector3(Mathf.Clamp(currentDirection.x + desiredDirection.x * accelerationSpeed, -1,1), Mathf.Clamp(currentDirection.y + desiredDirection.y * accelerationSpeed,-1,1), 0);
-        currentDirection = TempDirection * speed;
-        if (desiredDirection == Vector2.zero)
+        currentDirection = new Vector3(currentDirection.x + desiredDirection.x, currentDirection.y + desiredDirection.y, 0);
+        if (dragOn)
         {
-            moving = false;
-            currentDirection = currentDirection * deAccelerationRate;
-        }
-        else
-        {
-            moving = true;
+
+            if (desiredDirection == Vector2.zero)
+            {
+                moving = false;
+                currentDirection = currentDirection * deAccelerationRate;
+            }
+            else
+            {
+                moving = true;
+            }
+
+            if (moving)
+            {
+                rb.drag = 0f;
+            }
+            else
+            {
+                rb.drag = fakeDrag;
+            }
         }
 
-        if (moving)
-        {
-            rb.drag = 0f;
-        }
-        else
-        {
-            rb.drag = fakeDrag;
-        }
     }
 
     private void FixedUpdate()
     {
+        currentDirection = (currentDirection * speed) * accelerationSpeed;
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
         rb.AddForce(currentDirection);
+        Debug.Log(rb.velocity.magnitude);
     }
 }
