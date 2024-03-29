@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 769701181847943800}
+  - component: {fileID: 2736466080603451824}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -25,13 +26,34 @@ Transform:
   m_GameObject: {fileID: 3986403486063196938}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -0, y: -9.05, z: 0}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7259789340613564551}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2736466080603451824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986403486063196938}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7148701955283304300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42,15 +64,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e018001b299d902438fac5900feecd40, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e018001b299d902438fac5900feecd40, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e018001b299d902438fac5900feecd40, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e018001b299d902438fac5900feecd40, type: 3}
       propertyPath: m_LocalPosition.x
