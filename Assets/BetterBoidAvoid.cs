@@ -6,17 +6,22 @@ using UnityEngine;
 public class BetterBoidAvoid : MonoBehaviour
 {
     public int noOfPoints = 20;
-    private float turnFraction = 0.618033988749f;
+    public float turnFraction = 0.618033988749f;
     public float size = 1;
 
+    private float OldTurnFract;
+    
+    
     public GameObject Dot;
 
     public List<GameObject> Dots;
 
     
-    /*
+    
     public void CalculateNewThing()
     {
+        Variableschanged = false;
+        OldTurnFract = turnFraction;
         foreach (var VARIABLE in Dots)
         {
             Destroy(VARIABLE);
@@ -35,7 +40,7 @@ public class BetterBoidAvoid : MonoBehaviour
             CreateNewPoint(x, y, z, Color.red);
         }
     }
-    */
+    
 
     void CreateNewPoint(float xValue, float yValue, float zValue, Color colour)
     {
@@ -44,17 +49,36 @@ public class BetterBoidAvoid : MonoBehaviour
         Dots.Add(o);
     }
 
+    public bool Variableschanged;
     private void Update()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, range, obstacleMask))
+        if (Variableschanged)
         {
-            BTT.newTurnTowardsDir(true,FindUnobstructedDirection());
+            CalculateNewThing();
         }
-        else
+
+        if (OldTurnFract != turnFraction)
         {
-            BTT.newTurnTowardsDir(false,Vector3.zero);
+            Variableschanged = true;
         }
+
+        if (Input.GetKey("g"))
+        {
+            turnFraction -= 0.00001f;
+        }
+        if (Input.GetKey("h"))
+        {
+            turnFraction += 0.00001f;
+        }
+        //RaycastHit hit;
+        //if (Physics.Raycast(transform.position, transform.forward, range, obstacleMask))
+        //{
+        //    BTT.newTurnTowardsDir(true,FindUnobstructedDirection());
+        //}
+        //else
+        //{
+        //    BTT.newTurnTowardsDir(false,Vector3.zero);
+        //}
     }
 
     public BetterTurnTowards BTT;

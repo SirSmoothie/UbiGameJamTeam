@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BetterBoidAvoid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scenes/Fish Aquarium.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Charlie/Scenes/Fish Aquarium.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BetterTurnTowards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BoidHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishAlignment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishAvoid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishSeperation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishVision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ViewController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -101,6 +110,9 @@
       <workItem from="1711675883508" duration="4158000" />
       <workItem from="1711690454561" duration="2718000" />
       <workItem from="1711774342251" duration="5696000" />
+      <workItem from="1711793882067" duration="1493000" />
+      <workItem from="1711868112648" duration="11734000" />
+      <workItem from="1711890311421" duration="3069000" />
     </task>
     <servers />
   </component>
@@ -129,43 +141,17 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs</url>
-          <line>56</line>
-          <properties documentPath="D:\GameProjects\UbiGameJamTeamWIP\Assets\Team\Rory\PlayerModel.cs" initialLine="56" containingFunctionPresentation="Method 'FixedUpdate'">
-            <startOffsets>
-              <option value="1295" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1361" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/BetterBoidAvoid.cs</url>
-          <line>66</line>
+          <line>90</line>
           <properties documentPath="D:\GameProjects\UbiGameJamTeamWIP\Assets\BetterBoidAvoid.cs" initialLine="66" containingFunctionPresentation="Method 'FindUnobstructedDirection'">
             <startOffsets>
-              <option value="1747" />
+              <option value="2269" />
             </startOffsets>
             <endOffsets>
-              <option value="1748" />
+              <option value="2270" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/BetterBoidAvoid.cs</url>
-          <line>47</line>
-          <properties documentPath="D:\GameProjects\UbiGameJamTeamWIP\Assets\BetterBoidAvoid.cs" initialLine="47" containingFunctionPresentation="Method 'Update'">
-            <startOffsets>
-              <option value="1252" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1253" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

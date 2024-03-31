@@ -14,7 +14,7 @@ namespace rory
 
             if (GUILayout.Button("Spawn One Type of Boids"))
             {
-                //(target as BetterBoidAvoid)?.CalculateNewThing();
+                (target as BetterBoidAvoid)?.CalculateNewThing();
             }
         }
     }

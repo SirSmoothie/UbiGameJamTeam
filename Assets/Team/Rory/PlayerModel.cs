@@ -60,6 +60,6 @@ public class PlayerModel : MonoBehaviour
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
         rb.AddForce(currentDirection);
-        Debug.Log(rb.velocity.magnitude);
+        //Debug.Log(rb.velocity.magnitude);
     }
 }
