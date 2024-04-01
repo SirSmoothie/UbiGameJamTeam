@@ -10,6 +10,7 @@ public class FishSeperation : MonoBehaviour
     private Vector3 thing;
 
     public float force = 5f;
+    public float enemyMoveForce;
 
     private void Start()
     {
@@ -31,11 +32,16 @@ public class FishSeperation : MonoBehaviour
         directionAwayVector /= otherBoids.Count;
         return directionAwayVector;
     }
-
+    
     private void FixedUpdate()
     {
-        var dirForce = CalcuateDirection(neighbours.neighboursInRange);
-        rb.AddForce(dirForce * force, ForceMode.Force);
+        var dirForce = CalcuateDirection(neighbours.PersonalBubble());
+        //var dirForceTemp = CalcuateDirection(neighbours.FindNewEnemies());
+        //var dirForce2 = new Vector3(0,0,dirForceTemp.x + dirForceTemp.y);
+        rb.AddForce(dirForce * force , ForceMode.Force);
+        //Debug.Log(dirForce2 * enemyMoveForce);
+        
+       //rb.AddRelativeTorque(dirForce2 * enemyMoveForce, ForceMode.Force);
             
     }
 }

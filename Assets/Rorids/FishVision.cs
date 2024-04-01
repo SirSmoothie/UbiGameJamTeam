@@ -24,7 +24,7 @@ public class FishVision : MonoBehaviour
             if (Physics.Raycast(transform.localPosition, dir, out hit, rayRange, mask))
             {
                 var dist = hit.distance/rayRange;
-                TurnDir -= spreadAngle-(spreadAngle*distanceMultiplier.Evaluate(dist));
+                TurnDir += spreadAngle-(spreadAngle*distanceMultiplier.Evaluate(dist));
                 //Debug.Log(dist);
             }
             else
@@ -33,7 +33,7 @@ public class FishVision : MonoBehaviour
                 TurnDir += spreadAngle-(spreadAngle*distanceMultiplier.Evaluate(dist));
             }
         }
-        Debug.Log(TurnDir);
+        //Debug.Log(TurnDir);
         return TurnDir;
     }
 

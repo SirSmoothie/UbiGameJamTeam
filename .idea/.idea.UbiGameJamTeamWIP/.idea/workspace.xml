@@ -6,11 +6,31 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BetterBoidAvoid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterBoidAvoidEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterTurnTowards.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BetterTurnTowards.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoidHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoidHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishAlignment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishAlignment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishAvoid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishAvoid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishFriendRadar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishFriendRadar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishMove.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishMove.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishSeperation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishSeperation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishVision.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishVision.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ViewController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ViewController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +133,7 @@
       <workItem from="1711793882067" duration="1493000" />
       <workItem from="1711868112648" duration="11734000" />
       <workItem from="1711890311421" duration="3069000" />
+      <workItem from="1711939955706" duration="5563000" />
     </task>
     <servers />
   </component>
@@ -139,19 +160,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/BetterBoidAvoid.cs</url>
-          <line>90</line>
-          <properties documentPath="D:\GameProjects\UbiGameJamTeamWIP\Assets\BetterBoidAvoid.cs" initialLine="66" containingFunctionPresentation="Method 'FindUnobstructedDirection'">
-            <startOffsets>
-              <option value="2269" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2270" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

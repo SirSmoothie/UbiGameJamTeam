@@ -10,7 +10,7 @@ namespace rory
         public GameObject[] Boid;
 
         public GameObject targetObject;
-
+        public List<GameObject> FamilyFishes = new List<GameObject>();
         public int indexForBoidToSpawn;
         public void SpawnSelected()
         {
@@ -18,8 +18,9 @@ namespace rory
             {
                 for (int z = 0; z < SpawnSize; z++)
                 {
-                    var o = Instantiate(Boid[indexForBoidToSpawn], new Vector3(x, 0, z), Quaternion.identity);
-                    o.GetComponent<RoridsTurnTowards>().targetTransform = targetObject.transform;   
+                    var o = Instantiate(Boid[indexForBoidToSpawn], new Vector3(transform.position.x + x, transform.position.y + z, 0), Quaternion.identity);
+                    //FamilyFishes.Add();
+                   // o.GetComponent<RoridsTurnTowards>().targetTransform = targetObject.transform;   
                 }
             }
         }
@@ -30,10 +31,10 @@ namespace rory
             {
                 for (int x = 0; x < SpawnSize; x++)
                 {
-                    for (int z = 0; z < SpawnSize; z++)
+                    for (int y = 0; y < SpawnSize; y++)
                     {
-                        var o = Instantiate(Boid[i], new Vector3(transform.position.x + x, 0, transform.position.z + z), Quaternion.identity);
-                        o.GetComponent<RoridsTurnTowards>().targetTransform = targetObject.transform; 
+                        var o = Instantiate(Boid[i], new Vector3(transform.position.x + x, transform.position.y + y), Quaternion.identity);
+                        //o.GetComponent<RoridsTurnTowards>().targetTransform = targetObject.transform; 
                     }
                 }
             }
