@@ -15,17 +15,38 @@ public class PlayerModel : MonoBehaviour
     public bool moving;
     public bool dragOn;
     public float maxSpeed;
+
+    public bool OnLand;
+    public bool PlayerControlled;
+    public float FallingAirMaxSpeed;
     public void Horizontal(float value)
     {
-        desiredDirection.x = value;
+        if (PlayerControlled)
+        {
+            desiredDirection.x = value;
+        }
     }
     public void Vertical(float value)
     {
-        desiredDirection.y = value;
+        if (PlayerControlled)
+        {
+            if (OnLand != true)
+            {
+                desiredDirection.y = value;
+            }
+        }
     }
 
     void Update()
     {
+        if (OnLand)
+        {
+            rb.useGravity = true;
+        }
+        else
+        {
+            rb.useGravity = false;
+        }
         currentDirection = new Vector3(currentDirection.x + desiredDirection.x, currentDirection.y + desiredDirection.y, 0);
         if (dragOn)
         {
