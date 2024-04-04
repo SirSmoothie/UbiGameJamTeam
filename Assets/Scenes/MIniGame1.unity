@@ -469,10 +469,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Marlin
       objectReference: {fileID: 0}
-    - target: {fileID: 4444621861552886049, guid: 14df55dca875391458d6802c6e187c9d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -514,7 +510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 540}
+  m_AnchoredPosition: {x: 960, y: 675.79}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288428625
@@ -563,7 +559,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2054290300}
         m_TargetAssemblyTypeName: FishMarket, Assembly-CSharp
-        m_MethodName: GenerateRandomFish
+        m_MethodName: GenerateFish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -627,10 +623,6 @@ PrefabInstance:
     - target: {fileID: 1291084727526495037, guid: 5f01dc77c662b124d9a8085c22a66f6f, type: 3}
       propertyPath: m_Name
       value: Sardine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291084727526495037, guid: 5f01dc77c662b124d9a8085c22a66f6f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5010397465295382317, guid: 5f01dc77c662b124d9a8085c22a66f6f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -729,10 +721,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snapper
       objectReference: {fileID: 0}
-    - target: {fileID: 9013907845525906680, guid: 82ae73fa24518a14e94fa76d9bf7a901, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -795,10 +783,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trout
       objectReference: {fileID: 0}
-    - target: {fileID: 5003583507179224706, guid: 11f6cc9a88b0a684aa93f870daf02e5e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -855,10 +839,6 @@ PrefabInstance:
     - target: {fileID: 8125376653155982092, guid: c9da64ba96daf214dafe3a738d45ddc3, type: 3}
       propertyPath: m_Name
       value: Tuna
-      objectReference: {fileID: 0}
-    - target: {fileID: 8125376653155982092, guid: c9da64ba96daf214dafe3a738d45ddc3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1134,10 +1114,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mackerel
       objectReference: {fileID: 0}
-    - target: {fileID: 687602965986057910, guid: 51d2d8c6fcdc1c04a881c717dd8eba11, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2854170104353967303, guid: 51d2d8c6fcdc1c04a881c717dd8eba11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1353,10 +1329,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carp
       objectReference: {fileID: 0}
-    - target: {fileID: 8077720482198518996, guid: 085588b73799c2b47a443bd1bf78e656, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1553,10 +1525,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Salmon
       objectReference: {fileID: 0}
-    - target: {fileID: 9166591280309970269, guid: 1acd0b7c99bd1cc41ac48d85e1dc3a6e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1681,11 +1649,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2054290300}
         m_TargetAssemblyTypeName: FishMarket, Assembly-CSharp
-        m_MethodName: DiscardFish
-        m_Mode: 2
+        m_MethodName: RemoveFish
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1759,7 +1727,7 @@ Transform:
   m_GameObject: {fileID: 1993255105}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1858,11 +1826,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2054290300}
         m_TargetAssemblyTypeName: FishMarket, Assembly-CSharp
-        m_MethodName: KeepFish
-        m_Mode: 2
+        m_MethodName: TakeFish
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1935,11 +1903,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b45f07a8a30f744b8d72cd1072f37d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableFishPrefabs: []
-  keptFish: []
-  discardedFish: []
-  keptFishText: {fileID: 0}
-  discardedFishText: {fileID: 0}
+  fishList: []
+  fishMarket: []
 --- !u!4 &2054290301
 Transform:
   m_ObjectHideFlags: 0

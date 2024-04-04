@@ -7,64 +7,46 @@ using UnityEngine;
 
 public class FishMarket : MonoBehaviour
 {
-    public GameObject[] availableFishPrefabs;
+    public List<Fish> fishList = new List<Fish>();
 
-    
-    public List<GameObject> keptFish = new List<GameObject>();
-    public List<GameObject> discardedFish = new List<GameObject>();
-    
-    // TextMeshPro components to display lists
-    public TMP_Text keptFishText;
-    public TMP_Text discardedFishText;
-    
-    
+    public List<Fish> fishMarket = new List<Fish>();
+
     void Start()
     {
-        GameObject fishPrefabContainer = GameObject.Find("FishStorage");
-        if (fishPrefabContainer != null)
+        Fish[] foundFish = GameObject.FindObjectsOfType<Fish>();
+        foreach (Fish fish in foundFish)
         {
-            availableFishPrefabs = new GameObject[fishPrefabContainer.transform.childCount];
-            for (int i = 0; i < fishPrefabContainer.transform.childCount; i++)
+            fishList.Add(fish);
+        }
+    }
+    public void GenerateFish()
+    {
+        int numberOfFish = Random.Range(1, 11);
+
+
+        foreach (Fish generatedFish in fishMarket)
+        {
+            Destroy(generatedFish.gameObject);
+        }
+        fishMarket.Clear();
+
+        for (int i = 0; i < numberOfFish; i++)
+        {
+            int randomIndex = Random.Range(0, fishList.Count);
+            Fish fishPrefab = fishList[randomIndex];
+            Fish newFish = Instantiate(fishPrefab);
+            if (newFish != null)
             {
-                availableFishPrefabs[i] = fishPrefabContainer.transform.GetChild(i).gameObject;
+                fishMarket.Add(newFish);
+                newFish.gameObject.SetActive(false);
             }
         }
-    }
-    
-    void Update()
-    {
-        GameObject[] RemoveFromArray(GameObject[] array, GameObject item)
+
+        if (fishMarket.Count > 0)
         {
-            List<GameObject> tempList = new List<GameObject>(array);
-            tempList.Remove(item);
-            return tempList.ToArray();
+            fishMarket[0].gameObject.SetActive(true);
         }
-    }
-    
-    
-    public void GenerateRandomFish()
-    {
-        if (availableFishPrefabs.Length > 0)
-        {
-            int randomIndex = Random.Range(0, availableFishPrefabs.Length);
 
-            GameObject randomFish = availableFishPrefabs[randomIndex];
-            string fishName = randomFish.name;
-            
-            randomFish.SetActive(true);
-            Debug.Log("Generated fish: " + fishName);
-            
-            // Invoke the fish generation event
-            FishViewText.FishEvents.FishGenerated(fishName);
-        }
-    }
-    
-
-
-    private GameObject[] RemoveFromArray(GameObject[] gameObjects, GameObject fishPrefab)
-    {
-        List<GameObject> tempList = new List<GameObject>(gameObjects);
-        tempList.Remove(fishPrefab);
-        return tempList.ToArray();
+        Debug.Log("Generated " + numberOfFish + " fish.");
     }
 }
