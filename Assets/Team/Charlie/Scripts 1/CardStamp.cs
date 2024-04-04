@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class CardStamp : MonoBehaviour
 
 {
     public List<GameObject> chosenFish = new List<GameObject>();
 
+    public int score = 0;
+    public TextMeshProUGUI scoreText; 
+    
     public void FindFish()
     {
         Fish[] fishes = FindObjectsOfType<Fish>(); 
@@ -26,15 +29,72 @@ public class CardStamp : MonoBehaviour
             Fish fishComponent = fish.GetComponent<Fish>();
             if (fishComponent != null)
             {
-   
-                Debug.Log("Tail is poisoned: " + fishComponent.tail.isPoisoned);
+
+                Debug.Log("Is Tail poisoned: " + fishComponent.tail.isPoisoned);
                 Debug.Log("Head is poisoned: " + fishComponent.head.isPoisoned);
                 Debug.Log("Fin is poisoned: " + fishComponent.fin.isPoisoned);
+                
             }
+        }
 
+
+    }
+
+    public void OnKeepTail(bool isTailPoisoned)
+    {
+        if (isTailPoisoned)
+        {
+      
+            score -= 10;
+            UpdateScoreText();
+            Debug.Log("kept tail but poison" +"Current score: " + score);
+            
+        }
+        else
+        {
+  
+            score += 10;
+            UpdateScoreText();
+            Debug.Log("kept tail but not poison"+"Current score: " + score);
+        }
+
+
+    }
+    
+    public void RemoveTail(bool isTailPoisoned)
+    {
+        if (isTailPoisoned)
+        {
+
+            score += 10;
+            UpdateScoreText();
+            Debug.Log("removed tail but poison"+"Current score: " + score);
+            
+        }
+        else
+        {
+   
+            score -= 10;
+            UpdateScoreText();
+            Debug.Log("removed tail but not poison"+"Current score: " + score);
+        }
+
+    }
+
+    void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
         }
     }
+
+
+
+
+
 }
+        
 
 
 
