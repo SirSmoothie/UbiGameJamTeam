@@ -7,12 +7,16 @@ using UnityEngine;
 
 public class FishMarket : MonoBehaviour
 {
+    public CardStamp cardStamp; 
+    
     public List<Fish> fishList = new List<Fish>();
 
     public List<Fish> fishMarket = new List<Fish>();
 
     void Start()
     {
+        cardStamp = GetComponent<CardStamp>();
+        
         Fish[] foundFish = GameObject.FindObjectsOfType<Fish>();
         foreach (Fish fish in foundFish)
         {
@@ -47,6 +51,10 @@ public class FishMarket : MonoBehaviour
             fishMarket[0].gameObject.SetActive(true);
         }
 
+        cardStamp.FindFish(); 
+        
+        
+        
         Debug.Log("Generated " + numberOfFish + " fish.");
     }
 }

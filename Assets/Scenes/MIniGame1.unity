@@ -1647,9 +1647,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2054290300}
-        m_TargetAssemblyTypeName: FishMarket, Assembly-CSharp
-        m_MethodName: RemoveFish
+      - m_Target: {fileID: 1975501232}
+        m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
+        m_MethodName: RejectFish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1702,6 +1702,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2854170104353967303, guid: 51d2d8c6fcdc1c04a881c717dd8eba11, type: 3}
   m_PrefabInstance: {fileID: 1331718210}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975501231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975501233}
+  - component: {fileID: 1975501232}
+  m_Layer: 0
+  m_Name: Stamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1975501232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975501231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb347461d103224c84a3297184786f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosenFish: []
+--- !u!4 &1975501233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975501231}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993255105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,7 +1762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1993255106
 Transform:
   m_ObjectHideFlags: 0
@@ -1824,9 +1869,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2054290300}
-        m_TargetAssemblyTypeName: FishMarket, Assembly-CSharp
-        m_MethodName: TakeFish
+      - m_Target: {fileID: 1975501232}
+        m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
+        m_MethodName: KeepFish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1849,7 +1894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21248412, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1903,7 +1948,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b45f07a8a30f744b8d72cd1072f37d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishList: []
+  cardStamp: {fileID: 1975501232}
+  fishList:
+  - {fileID: 6823096206772143419, guid: 085588b73799c2b47a443bd1bf78e656, type: 3}
+  - {fileID: 6055352605097450303, guid: 51d2d8c6fcdc1c04a881c717dd8eba11, type: 3}
+  - {fileID: 2265515789256584360, guid: 14df55dca875391458d6802c6e187c9d, type: 3}
+  - {fileID: 2100265768529633383, guid: 1acd0b7c99bd1cc41ac48d85e1dc3a6e, type: 3}
+  - {fileID: 1697125719172594404, guid: 5f01dc77c662b124d9a8085c22a66f6f, type: 3}
+  - {fileID: 7300701754943912630, guid: 82ae73fa24518a14e94fa76d9bf7a901, type: 3}
+  - {fileID: 1871305329108559257, guid: 11f6cc9a88b0a684aa93f870daf02e5e, type: 3}
+  - {fileID: 2752574079564995469, guid: c9da64ba96daf214dafe3a738d45ddc3, type: 3}
   fishMarket: []
 --- !u!4 &2054290301
 Transform:
@@ -2005,3 +2059,4 @@ SceneRoots:
   - {fileID: 113728608}
   - {fileID: 2054290301}
   - {fileID: 1993255106}
+  - {fileID: 1975501233}
