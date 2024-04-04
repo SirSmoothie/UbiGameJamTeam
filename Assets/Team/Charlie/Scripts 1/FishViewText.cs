@@ -1,23 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FishViewText : MonoBehaviour
 {
-    public class FishEvents : MonoBehaviour
-    {
+    public TextMeshProUGUI scoreText; 
 
-        public delegate void FishGeneratedEventHandler(string fishName);
-
-        public static event FishGeneratedEventHandler OnFishGenerated;
-
-
-        public static void FishGenerated(string fishName)
+        void OnEnable()
         {
-            if (OnFishGenerated != null)
+            CardStamp.OnScoreUpdated += HandleScoreUpdated;
+        }
+
+        // Unsubscribe from the event
+        void OnDisable()
+        {
+            CardStamp.OnScoreUpdated -= HandleScoreUpdated;
+        }
+
+        // Example method to handle score updated event
+        void HandleScoreUpdated(int updatedScore)
+        {
+            if (scoreText != null)
             {
-                OnFishGenerated.Invoke(fishName);
+                scoreText.text = "Score: " + updatedScore;
             }
         }
-    }
+        
+        
+        
+
+    
 }

@@ -15,7 +15,6 @@ public class FishMarket : MonoBehaviour
 
     void Start()
     {
-        cardStamp = GetComponent<CardStamp>();
         
         Fish[] foundFish = GameObject.FindObjectsOfType<Fish>();
         foreach (Fish fish in foundFish)
@@ -55,6 +54,6 @@ public class FishMarket : MonoBehaviour
         
         
         
-        Debug.Log("Generated " + numberOfFish + " fish.");
+
     }
 }
