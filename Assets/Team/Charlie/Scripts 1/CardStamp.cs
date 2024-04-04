@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
 public class CardStamp : MonoBehaviour
 
 {
+
+    public delegate void ScoreUpdatedEventHandler(int updatedScore);
+
+    // Event for score updated
+    public static event ScoreUpdatedEventHandler OnScoreUpdated;
+
+
+
+
     public List<GameObject> chosenFish = new List<GameObject>();
 
     public int score = 0;
-    public TextMeshProUGUI scoreText; 
-    
+
+
     public void FindFish()
     {
-        Fish[] fishes = FindObjectsOfType<Fish>(); 
+        Fish[] fishes = FindObjectsOfType<Fish>();
         foreach (Fish fish in fishes)
         {
             StampFish(fish.gameObject);
@@ -33,131 +43,49 @@ public class CardStamp : MonoBehaviour
                 Debug.Log("Is Tail poisoned: " + fishComponent.tail.isPoisoned);
                 Debug.Log("Head is poisoned: " + fishComponent.head.isPoisoned);
                 Debug.Log("Fin is poisoned: " + fishComponent.fin.isPoisoned);
-                
+
             }
         }
 
 
     }
 
+    public void OnKeepFin(bool isFinPoisoned)
+    {
+        UpdateScore(isFinPoisoned ? -10 : 10, "kept tail but " + (isFinPoisoned ? "poison" : "not poison"));
+    }
+
+    public void RemoveFin(bool isFinPoisoned)
+    {
+        UpdateScore(isFinPoisoned ? 10 : -10, "removed tail but " + (isFinPoisoned ? "poison" : "not poison"));
+    }
+
+    public void OnKeepHead(bool isHeadPoisoned)
+    {
+        UpdateScore(isHeadPoisoned ? -10 : 10, "kept tail but " + (isHeadPoisoned ? "poison" : "not poison"));
+    }
+
+    public void RemoveHead(bool isHeadPoisoned)
+    {
+        UpdateScore(isHeadPoisoned ? 10 : -10, "removed tail but " + (isHeadPoisoned ? "poison" : "not poison"));
+    }
+
     public void OnKeepTail(bool isTailPoisoned)
     {
-        if (isTailPoisoned)
-        {
-      
-            score -= 10;
-            UpdateScoreText();
-            Debug.Log("kept tail but poison" +"Current score: " + score);
-            
-        }
-        else
-        {
-  
-            score += 10;
-            UpdateScoreText();
-            Debug.Log("kept tail but not poison"+"Current score: " + score);
-        }
-
-
+        UpdateScore(isTailPoisoned ? -10 : 10, "kept tail but " + (isTailPoisoned ? "poison" : "not poison"));
     }
-    
+
     public void RemoveTail(bool isTailPoisoned)
     {
-        if (isTailPoisoned)
-        {
-
-            score += 10;
-            UpdateScoreText();
-            Debug.Log("removed tail but poison"+"Current score: " + score);
-            
-        }
-        else
-        {
-   
-            score -= 10;
-            UpdateScoreText();
-            Debug.Log("removed tail but not poison"+"Current score: " + score);
-        }
-
+        UpdateScore(isTailPoisoned ? 10 : -10, "removed tail but " + (isTailPoisoned ? "poison" : "not poison"));
     }
 
-    void UpdateScoreText()
+    private void UpdateScore(int scoreChange, string logMessage)
     {
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
+        score += scoreChange;
+        OnScoreUpdated?.Invoke(score);
+        Debug.Log(logMessage + " Current score: " + score);
     }
-
-
-
 
 
 }
-        
-
-
-
-// {
-//     public List<Fish> chosenFish = new List<Fish>();
-//     public bool isRejectedHead = false;
-//     public bool isRejectedTail = false;
-//     public bool isRejectedFin = false;
-//     public bool isRejected = false;
-//
-//     void FixedUpdate()
-//     {
-//         Fish[] fishes = FindObjectsOfType<Fish>(); // Find all GameObjects with Fish script attached
-//         foreach (Fish fish in fishes)
-//         {
-//             StampFish(fish);
-//         }
-//     }
-//
-//     public void StampFish(Fish fish)
-//     {
-//         if (fish != null)
-//         {
-//             // Reset rejection status for each body part
-//             isRejectedHead = false;
-//             isRejectedTail = false;
-//             isRejectedFin = false;
-//
-//             // Check if any of the body parts are poisoned
-//             if (fish.tail != null && fish.tail.isPoisoned)
-//             {
-//                 Debug.Log("Fish rejected because tail is poisoned. Object: " + fish.gameObject.name);
-//                 isRejectedTail = true;
-//             }
-//             if (fish.fin != null && fish.fin.isPoisoned)
-//             {
-//                 Debug.Log("Fish rejected because fin is poisoned. Object: " + fish.gameObject.name);
-//                 isRejectedFin = true;
-//             }
-//             if (fish.head != null && fish.head.isPoisoned)
-//             {
-//                 Debug.Log("Fish rejected because head is poisoned. Object: " + fish.gameObject.name);
-//                 isRejectedHead = true;
-//             }
-//
-//             // Update the overall rejection status
-//             isRejected = isRejectedHead || isRejectedTail || isRejectedFin;
-//
-//             // Player input to keep or throw away the fish
-//             if (isRejected)
-//             {
-//                 Debug.Log("Press 'K' to keep or 'T' to throw away the fish.");
-//                 if (Input.GetKeyDown(KeyCode.W))
-//                 {
-//                     Debug.Log("Fish kept.");
-//                     isRejected = false;
-//                 }
-//                 else if (Input.GetKeyDown(KeyCode.Q))
-//                 {
-//                     Debug.Log("Fish thrown away.");
-//                 }
-//             }
-//         }
-//
-//     }
-// }
