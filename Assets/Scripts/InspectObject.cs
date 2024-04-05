@@ -96,7 +96,7 @@ public class InspectObject : MonoBehaviour, IInteractable
             //Debug.Log("Done Talking");
         }
 
-        if (bookmark > descriptions.Count)
+        if (bookmark == descriptions.Count)
         {
             StopDialog();
         }
