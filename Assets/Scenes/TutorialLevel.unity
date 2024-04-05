@@ -1463,17 +1463,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptions:
-  - details: Nothing
-    timeToDisplayMessage: 0
-  - details: 'MC: I wonder what this is...'
-    timeToDisplayMessage: 2
-  - details: 'Tablet: my mommy said that I should eat my greens, but they look green
-      and weird...'
-    timeToDisplayMessage: 4
-  - details: 'MC: I dont know what this "green" this child talks about, but it doesnt
-      sound appetizing'
-    timeToDisplayMessage: 3
-  interactedNo: 2
+  - statements:
+    - text: 'MC: I wonder what this is'
+      timeTillNextText: 1
+  - statements:
+    - text: 'Tablet: My mommy says that I need to eat my greens if I want to be big
+        and strong.'
+      timeTillNextText: 3
+    - text: 'Tablet: I dont want too, they look yucky and not yummy...'
+      timeTillNextText: 2
+  - statements:
+    - text: 'MC: Huh, weird...'
+      timeTillNextText: 1
+  descriptionsReRun: []
+  bookmark: 0
+  bookmark2: 0
+  timer: 1
+  paused: 0
+  IsTalking: 0
+  Skippable: 1
+  listRollOver: 1
+  AutoTalk: 1
+  secondRunning: 0
   textManager: {fileID: 581758163}
 --- !u!65 &852180688
 BoxCollider:
@@ -3541,9 +3552,9 @@ MonoBehaviour:
   fakeDrag: 10
   rb: {fileID: 8434108220780976808}
   dragOn: 0
-  maxSpeed: 100
+  maxSpeed: 3
   onLand: 1
-  playerControlled: 0
+  playerControlled: 1
   interactingOn: 0
   fallingAirMaxSpeed: 0
   waterSpeed: 0
@@ -8709,7 +8720,7 @@ Rigidbody:
   m_GameObject: {fileID: 6509928822782444284}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 5
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
