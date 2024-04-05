@@ -74,7 +74,7 @@ public class CardStamp : MonoBehaviour
             switch (part)
             {
                 case "fin":
-                    scoreChange = fishComponent.fin.isPoisoned ? -10 : 10;
+                    scoreChange = fishComponent.body.isPoisoned ? -10 : 10;
                     partType = "fin";
                     break;
                 case "head":
@@ -88,7 +88,7 @@ public class CardStamp : MonoBehaviour
             }
 
             UpdateScore(scoreChange,
-                $"Kept fish with {(fishComponent.fin.isPoisoned ? "poisoned" : "healthy")} {partType}.");
+                $"Kept fish with {(fishComponent.body.isPoisoned ? "poisoned" : "healthy")} {partType}.");
             fishParts[part + "Kept"] = true;
             CheckTrueCount();
         }
@@ -105,7 +105,7 @@ public class CardStamp : MonoBehaviour
             switch (part)
             {
                 case "fin":
-                    scoreChange = fishComponent.fin.isPoisoned ? 10 : -10;
+                    scoreChange = fishComponent.body.isPoisoned ? 10 : -10;
                     partType = "fin";
                     break;
                 case "head":
@@ -119,7 +119,7 @@ public class CardStamp : MonoBehaviour
             }
 
             UpdateScore(scoreChange,
-                $"Removed {partType} but {(fishComponent.fin.isPoisoned ? "poisoned" : "not poisoned")}");
+                $"Removed {partType} but {(fishComponent.body.isPoisoned ? "poisoned" : "not poisoned")}");
             fishParts[part + "Removed"] = true;
             CheckTrueCount();
         }

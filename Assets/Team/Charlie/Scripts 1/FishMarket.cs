@@ -12,7 +12,7 @@ public class FishMarket : MonoBehaviour
     public List<Fish> fishList = new List<Fish>();
 
     public List<Fish> fishMarket = new List<Fish>();
-    
+    public int fishAvaliable;
     private int currentIndex = 0;
     void Start()
     {
@@ -25,9 +25,14 @@ public class FishMarket : MonoBehaviour
     }
     public void GenerateFish()
     {
-        int numberOfFish = Random.Range(1, 11);
+        //int numberOfFish = Random.Range(1, 11);
 
-
+        if (fishAvaliable <= 0)
+        {
+            return;
+        }
+        int numberOfFish = 1;
+        fishAvaliable--;
         foreach (Fish generatedFish in fishMarket)
         {
             Destroy(generatedFish.gameObject);
@@ -57,18 +62,18 @@ public class FishMarket : MonoBehaviour
     
     public void GoToNextFish()
     {
-
-        if (currentIndex < fishMarket.Count)
-        {
-            fishMarket[currentIndex].gameObject.SetActive(false);
-        }
-
-
-        currentIndex++;
-        if (currentIndex < fishMarket.Count)
-        {
-            fishMarket[currentIndex].gameObject.SetActive(true);
-        }
+        GenerateFish();
+        // if (currentIndex < fishMarket.Count)
+        // {
+        //     fishMarket[currentIndex].gameObject.SetActive(false);
+        // }
+        //
+        //
+        // currentIndex++;
+        // if (currentIndex < fishMarket.Count)
+        // {
+        //     fishMarket[currentIndex].gameObject.SetActive(true);
+        // }
     }
     
     

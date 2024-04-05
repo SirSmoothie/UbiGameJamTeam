@@ -229,7 +229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Discard Fin
+  m_text: Discard Body
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -559,7 +559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 675.79}
+  m_AnchoredPosition: {x: 960, y: 964}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288428625
@@ -692,7 +692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280, y: 130}
+  m_AnchoredPosition: {x: 1050, y: 130}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &333429421
@@ -1378,7 +1378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1044792222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,7 +2043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Keep Fin
+  m_text: Keep Body
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2290,7 +2290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 648, y: 330}
+  m_AnchoredPosition: {x: 660, y: 190}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696595143
@@ -2423,7 +2423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276, y: 330}
+  m_AnchoredPosition: {x: 1050, y: 190}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720498705
@@ -2752,7 +2752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1051.14, y: 130}
+  m_AnchoredPosition: {x: 280, y: 130}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913432822
@@ -2859,7 +2859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1926476185}
   m_Layer: 0
-  m_Name: Fin
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2954,7 +2954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 662, y: 130}
+  m_AnchoredPosition: {x: 660, y: 130}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952046279
@@ -3179,7 +3179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1062, y: 330}
+  m_AnchoredPosition: {x: 280, y: 190}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034621143
@@ -3307,15 +3307,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardStamp: {fileID: 1975501232}
   fishList:
-  - {fileID: 6823096206772143419, guid: 085588b73799c2b47a443bd1bf78e656, type: 3}
-  - {fileID: 6055352605097450303, guid: 51d2d8c6fcdc1c04a881c717dd8eba11, type: 3}
-  - {fileID: 2265515789256584360, guid: 14df55dca875391458d6802c6e187c9d, type: 3}
-  - {fileID: 2100265768529633383, guid: 1acd0b7c99bd1cc41ac48d85e1dc3a6e, type: 3}
-  - {fileID: 1697125719172594404, guid: 5f01dc77c662b124d9a8085c22a66f6f, type: 3}
-  - {fileID: 7300701754943912630, guid: 82ae73fa24518a14e94fa76d9bf7a901, type: 3}
-  - {fileID: 1871305329108559257, guid: 11f6cc9a88b0a684aa93f870daf02e5e, type: 3}
-  - {fileID: 2752574079564995469, guid: c9da64ba96daf214dafe3a738d45ddc3, type: 3}
+  - {fileID: 6142026324902902756, guid: 7896751638541de49aed5d946b65e867, type: 3}
   fishMarket: []
+  fishAvaliable: 5
 --- !u!4 &2054290301
 Transform:
   m_ObjectHideFlags: 0
