@@ -5,117 +5,153 @@ using TMPro;
 using UnityEngine.UI;
 
 public class CardStamp : MonoBehaviour
+
 {
-    private bool finKept = false;
-    private bool finRemoved = false;
-
-    private bool headKept = false;
-    private bool headRemoved = false;
-
-    private bool tailKept = false;
-    private bool tailRemoved = false;
-    
     public delegate void ScoreUpdatedEventHandler(int updatedScore);
+
+    public FishMarket fishMarket;
     public static event ScoreUpdatedEventHandler OnScoreUpdated;
     public List<GameObject> chosenFish = new List<GameObject>();
     public int score = 0;
     public TextMeshProUGUI infoText;
 
+    private Dictionary<string, bool> fishParts = new Dictionary<string, bool>();
+    private int trueCount = 0;
+
+    void Start()
+    {
+        fishParts.Add("finKept", false);
+        fishParts.Add("finRemoved", false);
+        fishParts.Add("headKept", false);
+        fishParts.Add("headRemoved", false);
+        fishParts.Add("tailKept", false);
+        fishParts.Add("tailRemoved", false);
+    }
+
+    void CheckTrueCount()
+    {
+        trueCount = 0;
+        foreach (KeyValuePair<string, bool> entry in fishParts)
+        {
+            if (entry.Value)
+                trueCount++;
+        }
+
+        if (trueCount >= 3)
+        {
+            NextFish();
+            ResetFishParts();
+        }
+    }
+    void ResetFishParts()
+    {
+        List<string> keysToReset = new List<string>();
+        
+        foreach (var pair in fishParts)
+        {
+            if (pair.Value)
+            {
+                keysToReset.Add(pair.Key);
+            }
+        }
+        
+        foreach (string key in keysToReset)
+        {
+            fishParts[key] = false;
+        }
+    }
+    
+    
+    
+    public void OnKeepPart(string part)
+    {
+        GameObject fishGameObject = FindFish();
+        if (fishGameObject != null && !fishParts[part + "Kept"] && !fishParts[part + "Removed"])
+        {
+            Fish fishComponent = fishGameObject.GetComponent<Fish>();
+            int scoreChange = 0;
+            string partType = "";
+            switch (part)
+            {
+                case "fin":
+                    scoreChange = fishComponent.fin.isPoisoned ? -10 : 10;
+                    partType = "fin";
+                    break;
+                case "head":
+                    scoreChange = fishComponent.head.isPoisoned ? -10 : 10;
+                    partType = "head";
+                    break;
+                case "tail":
+                    scoreChange = fishComponent.tail.isPoisoned ? -10 : 10;
+                    partType = "tail";
+                    break;
+            }
+
+            UpdateScore(scoreChange,
+                $"Kept fish with {(fishComponent.fin.isPoisoned ? "poisoned" : "healthy")} {partType}.");
+            fishParts[part + "Kept"] = true;
+            CheckTrueCount();
+        }
+    }
+
+    public void RemovePart(string part)
+    {
+        GameObject fishGameObject = FindFish();
+        if (fishGameObject != null && !fishParts[part + "Kept"] && !fishParts[part + "Removed"])
+        {
+            Fish fishComponent = fishGameObject.GetComponent<Fish>();
+            int scoreChange = 0;
+            string partType = "";
+            switch (part)
+            {
+                case "fin":
+                    scoreChange = fishComponent.fin.isPoisoned ? 10 : -10;
+                    partType = "fin";
+                    break;
+                case "head":
+                    scoreChange = fishComponent.head.isPoisoned ? 10 : -10;
+                    partType = "head";
+                    break;
+                case "tail":
+                    scoreChange = fishComponent.tail.isPoisoned ? 10 : -10;
+                    partType = "tail";
+                    break;
+            }
+
+            UpdateScore(scoreChange,
+                $"Removed {partType} but {(fishComponent.fin.isPoisoned ? "poisoned" : "not poisoned")}");
+            fishParts[part + "Removed"] = true;
+            CheckTrueCount();
+        }
+    }
 
     public GameObject FindFish()
     {
         Fish[] fishes = FindObjectsOfType<Fish>();
         foreach (Fish fish in fishes)
         {
-            // Return the GameObject of the first fish found
             return fish.gameObject;
         }
 
-        return null; // Return null if no fish is found
+        return null;
     }
 
-    void StampFish(GameObject fishObject)
-    {
-        chosenFish.Clear();
-        chosenFish.Add(fishObject);
-    }
-
-    public void OnKeepFin()
-    {
-        GameObject fishGameObject = FindFish();
-        if (fishGameObject != null && !finKept && !finRemoved)
-        {
-            Fish fishComponent = fishGameObject.GetComponent<Fish>();
-            UpdateScore(fishComponent.fin.isPoisoned ? -10 : 10,
-                "Kept fish with " + (fishComponent.fin.isPoisoned ? "poisoned" : "healthy") + " fin.");
-            finKept = true;
-        }
-    }
-
-    public void RemoveFin()
-    {
-        GameObject fishGameObject = FindFish();
-        if (fishGameObject != null && !finKept && !finRemoved)
-        {
-            Fish fishComponent = fishGameObject.GetComponent<Fish>();
-            UpdateScore(fishComponent.fin.isPoisoned ? 10 : -10,
-                "Removed fin but " + (fishComponent.fin.isPoisoned ? "poisoned" : "not poisoned"));
-            finRemoved = true;
-        }
-    }
-
-    public void OnKeepHead()
-    {
-        GameObject fishGameObject = FindFish();
-        if (fishGameObject != null && !headKept && !headRemoved)
-        {
-            Fish fishComponent = fishGameObject.GetComponent<Fish>();
-            UpdateScore(fishComponent.head.isPoisoned ? -10 : 10,
-                "Kept fish with " + (fishComponent.head.isPoisoned ? "poisoned" : "healthy") + " head.");
-            headKept = true;
-        }
-    }
-
-    public void RemoveHead()
-    {
-        GameObject fishGameObject = FindFish();
-        if (fishGameObject != null && !headKept && !headRemoved)
-        {
-            Fish fishComponent = fishGameObject.GetComponent<Fish>();
-            UpdateScore(fishComponent.head.isPoisoned ? 10 : -10,
-                "Removed head but " + (fishComponent.head.isPoisoned ? "poisoned" : "not poisoned"));
-            headRemoved = true;
-        }
-    }
-
-    public void OnKeepTail()
-    {
-        GameObject fishGameObject = FindFish();
-        if (fishGameObject != null && !tailKept && !tailRemoved)
-        {
-            Fish fishComponent = fishGameObject.GetComponent<Fish>();
-            UpdateScore(fishComponent.tail.isPoisoned ? -10 : 10,
-                "Kept fish with " + (fishComponent.tail.isPoisoned ? "poisoned" : "healthy") + " tail.");
-            tailKept = true;
-        }
-    }
-
-    public void RemoveTail()
-    {
-        GameObject fishGameObject = FindFish();
-        if (fishGameObject != null && !tailKept && !tailRemoved)
-        {
-            Fish fishComponent = fishGameObject.GetComponent<Fish>();
-            UpdateScore(fishComponent.tail.isPoisoned ? 10 : -10,
-                "Removed tail but " + (fishComponent.tail.isPoisoned ? "poisoned" : "not poisoned"));
-            tailRemoved = true;
-        }
-    }
-    
     private void UpdateScore(int scoreChange, string logMessage)
     {
         score += scoreChange;
         OnScoreUpdated?.Invoke(score);
         Debug.Log(logMessage + " Current score: " + score);
     }
+
+    public void NextFish()
+    {
+  
+        if (fishMarket != null)
+        {
+            fishMarket.GoToNextFish();
+            Debug.Log("go to next fish");
+        }
+    }
 }
+
+

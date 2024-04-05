@@ -12,7 +12,8 @@ public class FishMarket : MonoBehaviour
     public List<Fish> fishList = new List<Fish>();
 
     public List<Fish> fishMarket = new List<Fish>();
-
+    
+    private int currentIndex = 0;
     void Start()
     {
         
@@ -44,6 +45,7 @@ public class FishMarket : MonoBehaviour
                 newFish.gameObject.SetActive(false);
             }
         }
+        
 
         if (fishMarket.Count > 0)
         {
@@ -51,9 +53,25 @@ public class FishMarket : MonoBehaviour
         }
 
         cardStamp.FindFish(); 
-        
-        
-        
-
     }
+    
+    public void GoToNextFish()
+    {
+
+        if (currentIndex < fishMarket.Count)
+        {
+            fishMarket[currentIndex].gameObject.SetActive(false);
+        }
+
+
+        currentIndex++;
+        if (currentIndex < fishMarket.Count)
+        {
+            fishMarket[currentIndex].gameObject.SetActive(true);
+        }
+    }
+    
+    
+    
+    
 }

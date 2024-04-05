@@ -12,13 +12,13 @@ public class FishViewText : MonoBehaviour
             CardStamp.OnScoreUpdated += HandleScoreUpdated;
         }
 
-        // Unsubscribe from the event
+
         void OnDisable()
         {
             CardStamp.OnScoreUpdated -= HandleScoreUpdated;
         }
 
-        // Example method to handle score updated event
+  
         void HandleScoreUpdated(int updatedScore)
         {
             if (scoreText != null)

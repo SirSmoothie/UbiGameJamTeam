@@ -741,14 +741,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1975501232}
         m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
-        m_MethodName: RemoveTail
-        m_Mode: 1
+        m_MethodName: RemovePart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: tail
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &333429422
@@ -2339,14 +2339,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1975501232}
         m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
-        m_MethodName: OnKeepFin
-        m_Mode: 1
+        m_MethodName: OnKeepPart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: fin
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1696595144
@@ -2472,14 +2472,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1975501232}
         m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
-        m_MethodName: OnKeepTail
-        m_Mode: 1
+        m_MethodName: OnKeepPart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: tail
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1720498706
@@ -2801,14 +2801,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1975501232}
         m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
-        m_MethodName: RemoveHead
-        m_Mode: 1
+        m_MethodName: RemovePart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: head
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1913432823
@@ -3003,14 +3003,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1975501232}
         m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
-        m_MethodName: RemoveFin
-        m_Mode: 1
+        m_MethodName: RemovePart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: fin
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1952046280
@@ -3085,6 +3085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb347461d103224c84a3297184786f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishMarket: {fileID: 2054290300}
   chosenFish: []
   score: 0
   infoText: {fileID: 1044792222}
@@ -3227,14 +3228,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1975501232}
         m_TargetAssemblyTypeName: CardStamp, Assembly-CSharp
-        m_MethodName: OnKeepHead
-        m_Mode: 1
+        m_MethodName: OnKeepPart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: head
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &2034621144
