@@ -12,25 +12,37 @@ public class PlayerModel : MonoBehaviour
     public float deAccelerationRate = 0.2f;
     public float fakeDrag;
     public Rigidbody rb;
-    public bool moving;
+    private bool moving;
     public bool dragOn;
     public float maxSpeed;
 
-    public bool OnLand;
-    public bool PlayerControlled;
-    public float FallingAirMaxSpeed;
+    public bool onLand;
+    public bool playerControlled;
+    public bool interactingOn;
+    public float fallingAirMaxSpeed;
+
+    public float waterSpeed;
+    public float landSpeed;
+    public void PlayerControlled(bool value)
+    {
+        interactingOn = value;
+    }
+    public void PlayerControlledLimited(bool value)
+    {
+        playerControlled = value;
+    }
     public void Horizontal(float value)
     {
-        if (PlayerControlled)
+        if (playerControlled)
         {
             desiredDirection.x = value;
         }
     }
     public void Vertical(float value)
     {
-        if (PlayerControlled)
+        if (playerControlled)
         {
-            if (OnLand != true)
+            if (onLand != true)
             {
                 desiredDirection.y = value;
             }
@@ -39,7 +51,7 @@ public class PlayerModel : MonoBehaviour
 
     void Update()
     {
-        if (OnLand)
+        if (onLand)
         {
             rb.useGravity = true;
         }
@@ -47,7 +59,7 @@ public class PlayerModel : MonoBehaviour
         {
             rb.useGravity = false;
         }
-        currentDirection = new Vector3(currentDirection.x + desiredDirection.x, currentDirection.y + desiredDirection.y, 0);
+        currentDirection = new Vector3(desiredDirection.x, desiredDirection.y, 0);
         if (dragOn)
         {
 
@@ -82,5 +94,29 @@ public class PlayerModel : MonoBehaviour
         }
         rb.AddForce(currentDirection);
         //Debug.Log(rb.velocity.magnitude);
+    }
+
+
+    public GameObject CurrentTrigger;
+    private void OnTriggerEnter(Collider other)
+    {
+        CurrentTrigger = other.gameObject;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (CurrentTrigger == other.gameObject)
+        {
+            CurrentTrigger = null;
+        }
+    }
+
+    public void Interact()
+    {
+        if (interactingOn)
+        {
+            IInteractable Object = CurrentTrigger.transform.GetComponent<IInteractable>();
+            Object.Interacted();
+        }
     }
 }

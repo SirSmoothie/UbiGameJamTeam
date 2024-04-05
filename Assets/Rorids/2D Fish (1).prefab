@@ -5108,8 +5108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51415e63704b4944fbcdaabb15a47586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dectectionRange: 10
-  personalBubbleRange: 0.2
+  dectectionRange: 2
+  personalBubbleRange: 1
   neighboursInRange: []
   detectionLayer:
     serializedVersion: 2

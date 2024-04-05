@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInput/MainControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInput/MainControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Fish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Charlie/Fish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/ColourGraph.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/ColourGraph.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/PlayerModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +25,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24e1ed8728684ea3ae446f80787d18de954a00/49/e22dbf47/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerTutorial.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Description.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editors/InspectObjectEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InspectObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Team/Charlie/Scripts 1/Fish.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -101,7 +115,8 @@
       <workItem from="1711890311421" duration="3069000" />
       <workItem from="1711939955706" duration="6198000" />
       <workItem from="1712146600867" duration="462000" />
-      <workItem from="1712226270980" duration="1007000" />
+      <workItem from="1712226270980" duration="1008000" />
+      <workItem from="1712286739131" duration="4253000" />
     </task>
     <servers />
   </component>
