@@ -54,9 +54,9 @@ public class Fish : MonoBehaviour
     public tFin fin;
     public tHead head;
     
-    public float TailPoisonRate = 0.3f; // needs to be changed if u want, idk
-    public float FinPoisonRate = 0.3f;// needs to be changed if u want, idk
-    public float HeadPoisonRate = 0.3f;// needs to be changed if u want, idk
+    public float TailPoisonRate = 0.5f; // needs to be changed if u want, idk
+    public float FinPoisonRate = 0.5f;// needs to be changed if u want, idk
+    public float HeadPoisonRate = 0.5f;// needs to be changed if u want, idk
 
     public int min = 1;
     public int max = 10;
@@ -78,4 +78,10 @@ public class Fish : MonoBehaviour
         head = new tHead(randomfinName, UnityEngine.Random.value < HeadPoisonRate, UnityEngine.Random.Range(min, max));
         
     }
+    
+    
+    
+    
+    
+    
 }
