@@ -59,7 +59,7 @@ public class ArrowkeyGame : MonoBehaviour
 
     public void DecreaseScore()
     {
-        score -= arrowsDestroyed;
+        score--; 
         UpdateScore();
     }
     
