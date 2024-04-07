@@ -23,6 +23,15 @@ public class PlayerModel : MonoBehaviour
 
     public float waterSpeed;
     public float landSpeed;
+
+    private void Awake()
+    {
+        if (EventBus.Current.ReturnMainSceneBool())
+        {
+            gameObject.transform.position = EventBus.Current.ReturnOldLocation();
+        }
+    }
+
     public void PlayerControlled(bool value)
     {
         interactingOn = value;
@@ -87,15 +96,17 @@ public class PlayerModel : MonoBehaviour
 
     private void FixedUpdate()
     {
-        currentDirection = (currentDirection * speed) * accelerationSpeed;
-        if (rb.velocity.magnitude > maxSpeed)
+        //currentDirection = (currentDirection * speed);
+        if (!onLand)
         {
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+            rb.velocity = currentDirection * maxSpeed;
         }
-        rb.AddForce(currentDirection);
+        else
+        {
+            rb.velocity = new Vector3(currentDirection.x * maxSpeed, rb.velocity.y,0);
+        }
         //Debug.Log(rb.velocity.magnitude);
     }
-
 
     public GameObject CurrentTrigger;
     private void OnTriggerEnter(Collider other)
@@ -116,7 +127,7 @@ public class PlayerModel : MonoBehaviour
         if (interactingOn)
         {
             IInteractable Object = CurrentTrigger.transform.GetComponent<IInteractable>();
-            Object.Interacted();
+            Object.Interacted(gameObject);
         }
     }
 }

@@ -14,7 +14,7 @@ public class InspectObjectEditor : Editor
             inspectObject = target as InspectObject;
             if(inspectObject != null)
             {
-                inspectObject.DisplayDescription();
+                //inspectObject.DisplayDescription();
             }
         }
     }

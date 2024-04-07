@@ -20,8 +20,30 @@ public class EventBus : MonoBehaviour
     [SerializeField] private int foodValue;
     [SerializeField] private int fishCaught;
 
+    [SerializeField] private Vector3 LocationInMainScene;
+    [SerializeField] private bool inMainScene;
+
     public void ChangeFoodCaughtAmount(int value)
     {
         fishCaught += value;
     }
+
+    public void UpdateMainSceneLocation(Vector3 loc)
+    {
+        LocationInMainScene = loc;
+    }
+    public Vector3 ReturnOldLocation()
+    {
+        return LocationInMainScene;
+    }
+
+    public void UpdateMainSceneBool(bool value)
+    {
+        inMainScene = value;
+    }
+    public bool ReturnMainSceneBool()
+    {
+        return inMainScene;
+    }
+    
 }
