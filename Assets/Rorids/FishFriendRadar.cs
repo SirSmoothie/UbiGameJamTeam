@@ -8,6 +8,7 @@ public class FishFriendRadar : MonoBehaviour
 {
     public float dectectionRange = 5;
     public float personalBubbleRange = 5;
+    public float enemyDectRange = 10;
     public List<GameObject> neighboursInRange;
     public LayerMask detectionLayer;
     public List<GameObject> FamilyFish;
@@ -16,10 +17,10 @@ public class FishFriendRadar : MonoBehaviour
 
     public void Start()
     {
-        for (int i = 0; i < Spawn.FamilyFishes.Count; i++)
-        {
-            FamilyFish.Add(Spawn.FamilyFishes[i]);
-        }
+        //for (int i = 0; i < Spawn.FamilyFishes.Count; i++)
+        //{
+        //    FamilyFish.Add(Spawn.FamilyFishes[i]);
+        //}
     }
 
     public List<GameObject> FindNewNeighbours()
@@ -47,26 +48,31 @@ public class FishFriendRadar : MonoBehaviour
 
         return neighboursInRange;
     }
-    
+
+    public bool FindEnemies()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDectRange, enemyLayer);
+        if (colliders.Length >= 1)
+        {
+            return true;
+        }
+        return false;
+    }
     public List<GameObject> FindNewEnemies()
     {
         neighboursInRange.Clear();
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, dectectionRange, enemyLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDectRange, enemyLayer);
         foreach (var VARIABLE in colliders)
         {
             GameObject boid = VARIABLE.gameObject;
-            if (boid != gameObject)
+            RaycastHit hit;
+            Vector3 dir = boid.transform.position - transform.position;
+            if (Physics.Raycast(transform.position, dir, out hit, enemyDectRange, enemyLayer))
             {
-                RaycastHit hit;
-                Vector3 dir = boid.transform.position - transform.position;
-
-                if (Physics.Raycast(transform.position, dir, out hit, dectectionRange, enemyLayer))
+                if (hit.collider.gameObject == boid)
                 {
-                    if (hit.collider.gameObject == boid)
-                    {
-                        neighboursInRange.Add(boid);
-                    }
+                    neighboursInRange.Add(boid);
                 }
             }
         }

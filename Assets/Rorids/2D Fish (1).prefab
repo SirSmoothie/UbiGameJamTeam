@@ -4932,6 +4932,7 @@ GameObject:
   - component: {fileID: 6723694090026461066}
   - component: {fileID: 6484039257893107425}
   - component: {fileID: 578218035835767724}
+  - component: {fileID: 2792484606472775558}
   m_Layer: 12
   m_Name: 2D Fish (1)
   m_TagString: Untagged
@@ -5110,6 +5111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dectectionRange: 2
   personalBubbleRange: 1
+  enemyDectRange: 10
   neighboursInRange: []
   detectionLayer:
     serializedVersion: 2
@@ -5160,6 +5162,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perlinNoise: 0
   speed: 0.5
+--- !u!114 &2792484606472775558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3761730709539462939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47971a5a2b446740b2ef4a4431e3b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: 0.00001
 --- !u!1 &4874940124729494543
 GameObject:
   m_ObjectHideFlags: 0
