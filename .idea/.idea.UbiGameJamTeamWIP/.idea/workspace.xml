@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerTutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerTutorial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/BetterBoidAvoid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/BetterBoidAvoid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editors/InspectObjectEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editors/InspectObjectEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InspectObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InspectObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/FishController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/FishController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +35,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editors/InspectObjectEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InspectObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SlotMachineEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Team/Charlie/Scripts 1/Fish.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Team/Rory/Scripts/ICatchable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_EventManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -96,10 +98,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23972">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23972" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -126,7 +128,7 @@
       <workItem from="1712226270980" duration="1008000" />
       <workItem from="1712286739131" duration="13541000" />
       <workItem from="1712311748915" duration="1361000" />
-      <workItem from="1712462030415" duration="8139000" />
+      <workItem from="1712462030415" duration="24080000" />
     </task>
     <servers />
   </component>

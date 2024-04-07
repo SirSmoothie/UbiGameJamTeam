@@ -5206,16 +5206,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2893a696240d414e9a6c2444c3d44ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 400
   desiredDirection: {x: 0, y: 0}
   currentDirection: {x: 0, y: 0, z: 0}
-  accelerationSpeed: 0.2
+  accelerationSpeed: 1
   deAccelerationRate: 0.4
-  fakeDrag: 10
+  fakeDrag: 0
   rb: {fileID: 8434108221305713496}
-  moving: 0
   dragOn: 1
-  maxSpeed: 3
+  maxSpeed: 5
+  onLand: 0
+  playerControlled: 1
+  interactingOn: 1
+  fallingAirMaxSpeed: 250
+  waterSpeed: 20
+  landSpeed: 20
+  CurrentTrigger: {fileID: 0}
 --- !u!54 &8434108221305713496
 Rigidbody:
   m_ObjectHideFlags: 0

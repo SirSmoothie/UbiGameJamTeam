@@ -23,9 +23,22 @@ public class EventBus : MonoBehaviour
     [SerializeField] private Vector3 LocationInMainScene;
     [SerializeField] private bool inMainScene;
 
+    [SerializeField] private bool playerInteractOn;
+    [SerializeField] private bool playerPlayerControlOn;
+
     public void ChangeFoodCaughtAmount(int value)
     {
         fishCaught += value;
+    }
+
+    public void ChangeFoodValueAmount(int value)
+    {
+        foodValue += value;
+    }
+
+    public int ReturnFoodValueAmount()
+    {
+        return foodValue;
     }
 
     public void UpdateMainSceneLocation(Vector3 loc)
@@ -45,5 +58,21 @@ public class EventBus : MonoBehaviour
     {
         return inMainScene;
     }
-    
+
+    public void ChangeInteracting(bool value)
+    {
+        playerInteractOn = value;
+    }
+    public bool ReturnInteracting()
+    {
+        return playerInteractOn;
+    }
+    public void ChangePlayerControl(bool value)
+    {
+        playerPlayerControlOn = value;
+    }
+    public bool ReturnPlayerControl()
+    {
+        return playerPlayerControlOn;
+    }
 }

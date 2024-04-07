@@ -28,10 +28,12 @@ public class PlayerTutorial : MonoBehaviour
     public void SwitchToPlayerControlledLimited()
     {
         player.GetComponent<PlayerModel>().PlayerControlledLimited(true);
+        EventBus.Current.ChangePlayerControl(true);
     }
 
     public void SwitchToPlayerControlledFull()
     {
         player.GetComponent<PlayerModel>().PlayerControlled(true);
+        EventBus.Current.ChangeInteracting(true);
     }
 }

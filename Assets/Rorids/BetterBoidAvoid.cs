@@ -64,11 +64,11 @@ public class BetterBoidAvoid : MonoBehaviour
 
         if (Input.GetKey("g"))
         {
-            turnFraction -= 0.00001f;
+            turnFraction -= 0.00005f;
         }
         if (Input.GetKey("h"))
         {
-            turnFraction += 0.00001f;
+            turnFraction += 0.00005f;
         }
         //RaycastHit hit;
         //if (Physics.Raycast(transform.position, transform.forward, range, obstacleMask))

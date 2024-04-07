@@ -26,9 +26,15 @@ public class PlayerModel : MonoBehaviour
 
     private void Awake()
     {
-        if (EventBus.Current.ReturnMainSceneBool())
+        if (EventBus.Current != null)
         {
-            gameObject.transform.position = EventBus.Current.ReturnOldLocation();
+            if (EventBus.Current.ReturnMainSceneBool())
+            {
+                gameObject.transform.position = EventBus.Current.ReturnOldLocation();
+            }
+
+            interactingOn = EventBus.Current.ReturnInteracting();
+            playerControlled = EventBus.Current.ReturnPlayerControl();
         }
     }
 
@@ -126,6 +132,7 @@ public class PlayerModel : MonoBehaviour
     {
         if (interactingOn)
         {
+            if (CurrentTrigger == null) return;
             IInteractable Object = CurrentTrigger.transform.GetComponent<IInteractable>();
             Object.Interacted(gameObject);
         }
