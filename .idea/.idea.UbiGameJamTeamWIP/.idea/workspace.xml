@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerTutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerTutorial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rorids/BetterBoidAvoid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/BetterBoidAvoid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scenes/Fish.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/FishController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/FishController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +119,7 @@
       <workItem from="1712226270980" duration="1008000" />
       <workItem from="1712286739131" duration="13541000" />
       <workItem from="1712311748915" duration="1361000" />
-      <workItem from="1712462030415" duration="24080000" />
+      <workItem from="1712462030415" duration="26701000" />
     </task>
     <servers />
   </component>

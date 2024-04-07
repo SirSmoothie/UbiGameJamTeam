@@ -29,6 +29,8 @@ public class SlotMachine : MonoBehaviour, IInteractable
     public bool gameGoing;
 
     public int secondPrize, thirdPrize, forthPrize, fithPrize;
+    
+    public Animator anim;
     public void Update()
     {
         if (gameGoing)
@@ -81,6 +83,13 @@ public class SlotMachine : MonoBehaviour, IInteractable
     
     private IEnumerator SlotCheckingThing()
     {
+        yield return new WaitForSeconds(0.15f);
+        isSlotDone1 = false;
+        isSlotDone2 = false;
+        isSlotDone3 = false;
+        slot1Stop = false;
+        slot2Stop = false;
+        slot3Stop = false;
         yield return new WaitForSeconds(timeTillSlotStops);
         //StartCoroutine(SlotRotation(slotView1));
         isSlotDone1 = true;
@@ -111,14 +120,9 @@ public class SlotMachine : MonoBehaviour, IInteractable
         {
             if (!gameGoing)
             {
+                anim.SetTrigger("PlayAnimation");
                 EventBus.Current.ChangeFoodValueAmount(-1);
                 RandomizeSlots();
-                isSlotDone1 = false;
-                isSlotDone2 = false;
-                isSlotDone3 = false;
-                slot1Stop = false;
-                slot2Stop = false;
-                slot3Stop = false;
                 StartCoroutine(SlotCheckingThing());
                 gameGoing = true;
             }
@@ -140,6 +144,7 @@ public class SlotMachine : MonoBehaviour, IInteractable
     IEnumerator FinishedGame()
     {
         CalulatePrize();
+        anim.SetTrigger("GoBack");
         yield return new WaitForSeconds(1f);
         gameGoing = false;
     }
