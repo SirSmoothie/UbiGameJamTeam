@@ -25,6 +25,7 @@ public class EventBus : MonoBehaviour
 
     [SerializeField] private bool playerInteractOn;
     [SerializeField] private bool playerPlayerControlOn;
+    [SerializeField] private GameObject playerGameObject;
 
     public void ChangeFoodCaughtAmount(int value)
     {
@@ -74,5 +75,16 @@ public class EventBus : MonoBehaviour
     public bool ReturnPlayerControl()
     {
         return playerPlayerControlOn;
+    }
+
+    public void IAmThePlayer(GameObject playerObject)
+    {
+        Debug.Log("Player Set In Game Manager");
+        playerGameObject = playerObject;
+    }
+    public GameObject PlayerReference()
+    {
+        Debug.Log("returned from Game Manager");
+        return playerGameObject;
     }
 }

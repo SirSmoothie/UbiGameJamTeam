@@ -24,6 +24,8 @@ public class PlayerModel : MonoBehaviour
     public float waterSpeed;
     public float landSpeed;
 
+    private PlayerStats playerStats;
+
     private void Awake()
     {
         if (EventBus.Current != null)
@@ -32,9 +34,11 @@ public class PlayerModel : MonoBehaviour
             {
                 gameObject.transform.position = EventBus.Current.ReturnOldLocation();
             }
-
+        
             interactingOn = EventBus.Current.ReturnInteracting();
             playerControlled = EventBus.Current.ReturnPlayerControl();
+            EventBus.Current.IAmThePlayer(gameObject);
+            playerStats = GetComponent<PlayerStats>();
         }
     }
 
@@ -105,7 +109,7 @@ public class PlayerModel : MonoBehaviour
         //currentDirection = (currentDirection * speed);
         if (!onLand)
         {
-            rb.velocity = currentDirection * maxSpeed;
+            rb.velocity = currentDirection * (maxSpeed * playerStats.ReturnWeightSpeedMultiplier());
         }
         else
         {
