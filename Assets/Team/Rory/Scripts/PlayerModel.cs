@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerModel : MonoBehaviour
@@ -19,13 +20,20 @@ public class PlayerModel : MonoBehaviour
     public bool onLand;
     public bool playerControlled;
     public bool interactingOn;
+    public bool playerActionEnabled;
     public float fallingAirMaxSpeed;
 
     public float waterSpeed;
     public float landSpeed;
 
-    private PlayerStats playerStats;
+    [SerializeField] private PlayerStats playerStats;
 
+    private bool facingForward;
+    public GameObject netObject;
+    public GameObject tempView;
+    public GameObject hitBox;
+
+    public GameObject PlayerGameObject;
     private void Awake()
     {
         if (EventBus.Current != null)
@@ -37,9 +45,13 @@ public class PlayerModel : MonoBehaviour
         
             interactingOn = EventBus.Current.ReturnInteracting();
             playerControlled = EventBus.Current.ReturnPlayerControl();
-            EventBus.Current.IAmThePlayer(gameObject);
-            playerStats = GetComponent<PlayerStats>();
         }
+    }
+
+    private void Start()
+    {
+        EventBus.Current.IAmThePlayer(PlayerGameObject);
+        playerStats = gameObject.GetComponent<PlayerStats>();
     }
 
     public void PlayerControlled(bool value)
@@ -55,6 +67,7 @@ public class PlayerModel : MonoBehaviour
         if (playerControlled)
         {
             desiredDirection.x = value;
+            
         }
     }
     public void Vertical(float value)
@@ -79,6 +92,7 @@ public class PlayerModel : MonoBehaviour
             rb.useGravity = false;
         }
         currentDirection = new Vector3(desiredDirection.x, desiredDirection.y, 0);
+        
         if (dragOn)
         {
 
@@ -94,6 +108,15 @@ public class PlayerModel : MonoBehaviour
 
             if (moving)
             {
+                if (facingForward)
+                {
+                    tempView.transform.rotation = Quaternion.FromToRotation(Vector3.right, currentDirection);
+                }
+                else
+                {
+                    tempView.transform.rotation = Quaternion.FromToRotation(Vector3.right, -currentDirection);
+                }
+                hitBox.transform.rotation = Quaternion.FromToRotation(Vector3.right, currentDirection);
                 rb.drag = 0f;
             }
             else
@@ -101,7 +124,7 @@ public class PlayerModel : MonoBehaviour
                 rb.drag = fakeDrag;
             }
         }
-
+        
     }
 
     private void FixedUpdate()
@@ -110,6 +133,14 @@ public class PlayerModel : MonoBehaviour
         if (!onLand)
         {
             rb.velocity = currentDirection * (maxSpeed * playerStats.ReturnWeightSpeedMultiplier());
+            if (currentDirection.z == Vector3.left.z)
+            {
+                facingForward = false;
+            }
+            if (currentDirection.z == Vector3.right.z)
+            {
+                facingForward = true;
+            }
         }
         else
         {
@@ -139,6 +170,18 @@ public class PlayerModel : MonoBehaviour
             if (CurrentTrigger == null) return;
             IInteractable Object = CurrentTrigger.transform.GetComponent<IInteractable>();
             Object.Interacted(gameObject);
+        }
+    }
+
+    
+    public void Action()
+    {
+        if (playerActionEnabled)
+        {
+            //Debug.Log("ACTION ACTIVATE");
+            var fish = netObject.transform.GetComponent<NetController>().CatchFish();
+            if (fish == null) return;
+            PlayerInventory.Current.AddFishToInventory(fish.GetComponent<FishController>().ReturnFishStats());
         }
     }
 }

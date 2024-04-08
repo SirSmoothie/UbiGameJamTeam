@@ -113,4 +113,9 @@ public class PlayerStats : MonoBehaviour
     {
         return weight;
     }
+
+    public void ChangeWeightValue(float value)
+    {
+        weight += value;
+    }
 }

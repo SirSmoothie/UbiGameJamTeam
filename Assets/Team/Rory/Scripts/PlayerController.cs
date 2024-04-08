@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
         playerInput.actions.FindAction("Horizontal").performed += OnHorizontalOnperformed;
         playerInput.actions.FindAction("Horizontal").canceled += OnHorizontalOnperformed;
         playerInput.actions.FindAction("Interact").performed += aContext => player.Interact();
+        playerInput.actions.FindAction("Action").performed += aContext => player.Action();
         //playerInput.actions.FindAction("Interact").canceled += aContext => player.StopInteract();
         //playerInput.actions.FindAction("Dash").canceled += aContext => playerController.Dash();
         //playerInput.actions.FindAction("Turn").performed += OnCarTurnOnperformed;

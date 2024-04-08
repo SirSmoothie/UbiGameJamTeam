@@ -14,7 +14,6 @@ namespace rory
         public int minAmountOfFish;
         public int maxAmountOfFish;
         
-        
         public GameObject[] Boid;
 
         public GameObject targetObject;

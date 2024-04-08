@@ -115,13 +115,13 @@ public class SlotMachine : MonoBehaviour, IInteractable
     }
     public void Interacted(GameObject Interactor)
     {
-        var foodValue = EventBus.Current.ReturnFoodValueAmount();
+        var foodValue = PlayerInventory.Current.ReturnFishTotal();
         if (foodValue >= 1)
         {
             if (!gameGoing)
             {
                 anim.SetTrigger("PlayAnimation");
-                EventBus.Current.ChangeFoodValueAmount(-1);
+                PlayerInventory.Current.changeFishAmountValue(-1);
                 RandomizeSlots();
                 StartCoroutine(SlotCheckingThing());
                 gameGoing = true;
@@ -153,18 +153,18 @@ public class SlotMachine : MonoBehaviour, IInteractable
     {
         if (slot1 == 5 && slot2 == 5 && slot3 == 5)
         {
-            var value = EventBus.Current.ReturnFoodValueAmount();
-            EventBus.Current.ChangeFoodValueAmount(-value);
+            var value = PlayerInventory.Current.ReturnFishTotal();
+            PlayerInventory.Current.changeFishAmountValue(-value);
             return;
         }
         if (slot1 == 4 && slot2 == 4 && slot3 == 4)
         {
-            EventBus.Current.ChangeFoodValueAmount(secondPrize);
+            PlayerInventory.Current.changeFishAmountValue(secondPrize);
             return;
         }
         if (slot1 == 4 && slot2 == 4 && slot3 == 5 || slot1 == 5 && slot2 == 4 && slot3 == 4 || slot1 == 4 && slot2 == 5 && slot3 == 4)
         {
-            EventBus.Current.ChangeFoodValueAmount(thirdPrize);
+            PlayerInventory.Current.changeFishAmountValue(thirdPrize);
             return;
         }
 
@@ -174,14 +174,14 @@ public class SlotMachine : MonoBehaviour, IInteractable
             {
                 if (slot3 >= 1 && slot3 <= 3)
                 {
-                    EventBus.Current.ChangeFoodValueAmount(forthPrize);
+                    PlayerInventory.Current.changeFishAmountValue(forthPrize);
                     return;
                 }
             }
         }
         if (slot1 == 0 || slot2 == 0 || slot3 == 0)
         {
-            EventBus.Current.ChangeFoodValueAmount(fithPrize);
+            PlayerInventory.Current.changeFishAmountValue(fithPrize);
             return;
         }
     }

@@ -16,21 +16,30 @@ public class FishTurn : MonoBehaviour
         fishRadar = GetComponent<FishFriendRadar>();
     }
 
-    private void Update()
+    private Vector3 CalcuateDirection(List<GameObject> otherBoids)
     {
-        if (fishRadar.FindEnemies())
+        if (otherBoids.Count == 0)
         {
-            var ObjectList = fishRadar.FindNewEnemies();
-            var directionAwayVector = new Vector3();
-            foreach (GameObject Boid in ObjectList)
-            {
-                directionAwayVector += (transform.position - Boid.transform.position).normalized;
-            }
-            directionAwayVector /= ObjectList.Count;
-
-            float angle = Vector3.SignedAngle(transform.right, directionAwayVector, Vector3.forward);
-                
-            rb.AddRelativeTorque(0, 0, angle*turnSpeed, ForceMode.Force);
+            return Vector3.zero;
         }
+            var directionAwayVector = new Vector3();
+            foreach (GameObject Boid in otherBoids)
+            {
+                directionAwayVector -= (transform.position - Boid.transform.position).normalized;
+            }
+            directionAwayVector /= otherBoids.Count;
+            return directionAwayVector;
+    }
+    
+    private void FixedUpdate()
+    {
+        var dirForce = CalcuateDirection(fishRadar.FindNewEnemies());
+        //var dirForceTemp = CalcuateDirection(neighbours.FindNewEnemies());
+        //var dirForce2 = new Vector3(0,0,dirForceTemp.x + dirForceTemp.y);
+        rb.AddForce(dirForce * turnSpeed , ForceMode.Force);
+        //Debug.Log(dirForce2 * enemyMoveForce);
+        
+        //rb.AddRelativeTorque(dirForce2 * enemyMoveForce, ForceMode.Force);
+            
     }
 }

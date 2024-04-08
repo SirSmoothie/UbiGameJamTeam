@@ -81,10 +81,22 @@ public class EventBus : MonoBehaviour
     {
         Debug.Log("Player Set In Game Manager");
         playerGameObject = playerObject;
+        Debug.Log(playerObject.transform);
+        Debug.Log(playerGameObject.transform);
+        UpdatePlayerObject();
+
     }
     public GameObject PlayerReference()
     {
         Debug.Log("returned from Game Manager");
+        Debug.Log(playerGameObject);
         return playerGameObject;
+    }
+    public delegate void UpdatePlayerGameObject();
+    public event UpdatePlayerGameObject UpdatePlayerGameObjectEvent;
+    public void UpdatePlayerObject()
+    {
+        Debug.Log("CallingEvent");
+        UpdatePlayerGameObjectEvent?.Invoke();
     }
 }
