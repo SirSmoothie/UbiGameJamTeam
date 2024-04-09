@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AirSliderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AirSliderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishTurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishTurn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthSliderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthSliderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInput/MainControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInput/MainControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/2D Fish (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRorids.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/FishController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/FishController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WeightTextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WeightTextController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/New Lighting Settings.lighting" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/FishStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishTurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthSliderController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MoneyTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NetController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerTutorial.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,6 +126,7 @@
       <workItem from="1712311748915" duration="1361000" />
       <workItem from="1712462030415" duration="27081000" />
       <workItem from="1712557221544" duration="22659000" />
+      <workItem from="1712662832811" duration="314000" />
     </task>
     <servers />
   </component>
