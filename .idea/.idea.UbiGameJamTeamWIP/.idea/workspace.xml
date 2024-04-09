@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/New Lighting Settings.lighting" afterDir="false" />
     </list>
@@ -126,7 +127,7 @@
       <workItem from="1712311748915" duration="1361000" />
       <workItem from="1712462030415" duration="27081000" />
       <workItem from="1712557221544" duration="22659000" />
-      <workItem from="1712662832811" duration="314000" />
+      <workItem from="1712662832811" duration="1025000" />
     </task>
     <servers />
   </component>
