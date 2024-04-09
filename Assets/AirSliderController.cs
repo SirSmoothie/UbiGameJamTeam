@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class AirSliderController : MonoBehaviour
 {
-    private Scrollbar scrollbar;
-    private PlayerStats playerStats;
-    private void Start()
+    [SerializeField] private Scrollbar scrollbar;
+    [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private GameObject player;
+    private void Awake()
     {
         scrollbar = GetComponent<Scrollbar>();
         EventBus.Current.UpdatePlayerGameObjectEvent += PlayerUpdated;
@@ -16,7 +17,8 @@ public class AirSliderController : MonoBehaviour
 
     public void PlayerUpdated()
     {
-        playerStats = EventBus.Current.PlayerReference().GetComponent<PlayerStats>();
+        player = EventBus.Current.PlayerReference();
+        playerStats = player.GetComponent<PlayerStats>();
         playerStats.UpdateAirAmountEvent += UpdateScrollbar;
         UpdateScrollbar();
     }

@@ -9,5 +9,6 @@ public class FishStatus
    public string nameOfFish = new string("BlankName");
    public float sizeOfFish = 1;
    public float weightOfFish = 1;
-   
+   public string description;
+
 }

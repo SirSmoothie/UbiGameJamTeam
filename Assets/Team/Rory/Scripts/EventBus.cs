@@ -25,21 +25,16 @@ public class EventBus : MonoBehaviour
 
     [SerializeField] private bool playerInteractOn;
     [SerializeField] private bool playerPlayerControlOn;
+    [SerializeField] private bool inWater;
     [SerializeField] private GameObject playerGameObject;
 
-    public void ChangeFoodCaughtAmount(int value)
+    public void ChangeInWaterBool(bool value)
     {
-        fishCaught += value;
+        inWater = value;
     }
-
-    public void ChangeFoodValueAmount(int value)
+    public bool ReturnInWaterBool()
     {
-        foodValue += value;
-    }
-
-    public int ReturnFoodValueAmount()
-    {
-        return foodValue;
+        return inWater;
     }
 
     public void UpdateMainSceneLocation(Vector3 loc)
@@ -79,24 +74,24 @@ public class EventBus : MonoBehaviour
 
     public void IAmThePlayer(GameObject playerObject)
     {
-        Debug.Log("Player Set In Game Manager");
+        //Debug.Log("Player Set In Game Manager");
         playerGameObject = playerObject;
-        Debug.Log(playerObject.transform);
-        Debug.Log(playerGameObject.transform);
+        //Debug.Log(playerObject.transform);
+        //Debug.Log(playerGameObject.transform);
         UpdatePlayerObject();
 
     }
     public GameObject PlayerReference()
     {
-        Debug.Log("returned from Game Manager");
-        Debug.Log(playerGameObject);
+        //Debug.Log("returned from Game Manager");
+        //Debug.Log(playerGameObject);
         return playerGameObject;
     }
     public delegate void UpdatePlayerGameObject();
     public event UpdatePlayerGameObject UpdatePlayerGameObjectEvent;
     public void UpdatePlayerObject()
     {
-        Debug.Log("CallingEvent");
+        //Debug.Log("CallingEvent");
         UpdatePlayerGameObjectEvent?.Invoke();
     }
 }

@@ -15,6 +15,11 @@ namespace rory
         public int maxAmountOfFish;
         
         public GameObject[] Boid;
+        
+        public GameObject[] commonFish;
+        public GameObject[] uncommonFish;
+        public GameObject[] rareFish;
+        public GameObject[] legendaryFish;
 
         public GameObject targetObject;
         public List<GameObject> FamilyFishes = new List<GameObject>();
@@ -34,11 +39,28 @@ namespace rory
             {
                 for (int z = 0; z < spawnSizeY; z++)
                 {
-                    var o = Instantiate(Boid[indexForBoidToSpawn], new Vector3(transform.position.x + x, transform.position.y + z, 0), quaternion.identity);
+                    var chance = Random.Range(0, 9);
+                    if (chance <= 5)
+                    {
+                        var newIndexCommonFish = Random.Range(0, commonFish.Length);
+                        var oCommonFish = Instantiate(commonFish[newIndexCommonFish], new Vector3(transform.position.x + x, transform.position.y + z, 0), quaternion.identity);   
+                    }
+                    else if (chance >= 8)
+                    {
+                        var newIndexRareFish = Random.Range(0, rareFish.Length);
+                        var o = Instantiate(rareFish[newIndexRareFish], new Vector3(transform.position.x + x, transform.position.y + z, 0), quaternion.identity);
+                    }
+                    else
+                    {
+                        var newIndexUncommonFish = Random.Range(0, uncommonFish.Length);
+                        var oUncommonFish = Instantiate(uncommonFish[newIndexUncommonFish], new Vector3(transform.position.x + x, transform.position.y + z, 0), quaternion.identity);
+                    }
                     //FamilyFishes.Add();
                    // o.GetComponent<RoridsTurnTowards>().targetTransform = targetObject.transform;   
                 }
             }
+            var newIndexLegendaryFish = Random.Range(0, legendaryFish.Length);
+            var oLegendaryFish = Instantiate(legendaryFish[newIndexLegendaryFish], new Vector3(transform.position.x, transform.position.y, 0), quaternion.identity);
         }
         
         public void SpawnOneOfEach()

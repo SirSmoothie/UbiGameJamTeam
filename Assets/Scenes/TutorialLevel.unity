@@ -12181,6 +12181,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5490435750032563884, guid: dbd0d9e6cbd1f1348bcfbd9e9cf1b3ac, type: 3}
+      propertyPath: leadsToWater
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490435750032563884, guid: dbd0d9e6cbd1f1348bcfbd9e9cf1b3ac, type: 3}
       propertyPath: MainSceneIndex
       value: 0
       objectReference: {fileID: 0}

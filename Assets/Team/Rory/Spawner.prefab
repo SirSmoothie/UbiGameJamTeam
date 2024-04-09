@@ -50,6 +50,20 @@ MonoBehaviour:
   maxAmountOfFish: 6
   Boid:
   - {fileID: 3761730709539462939, guid: 731252fad8872eb43bb4d0ba42a1dc0b, type: 3}
+  commonFish:
+  - {fileID: 6688179404869097991, guid: 27503328460b4e04296c442b2d60b9d7, type: 3}
+  - {fileID: 2971348281934231129, guid: d0c6fbd793c7f5e4c8f65ce6c1eefa10, type: 3}
+  - {fileID: 5471964874103968143, guid: 0ad40e192f6cc024a8f35a610e8d28e3, type: 3}
+  - {fileID: 1670916655335148934, guid: 5dbbecb60bb407b45b711d0bd803132e, type: 3}
+  uncommonFish:
+  - {fileID: 6353408656364043392, guid: 3475546ce5379f94baaca17f782d9d68, type: 3}
+  - {fileID: 6596664636816328862, guid: c84b89f3b7437094d87f5cffe7aee2ec, type: 3}
+  - {fileID: 2771460752722547197, guid: 00de4bb739de5bb4eb24cec023f620ee, type: 3}
+  rareFish:
+  - {fileID: 1373796034420462381, guid: c20ba80c99481024fa95e6d113940d11, type: 3}
+  - {fileID: 5452647808499970462, guid: 3506b9bc34bdb104688e4c7d1458476d, type: 3}
+  legendaryFish:
+  - {fileID: 7093671741752641852, guid: feb91ba0747a2b64ea9165258d70d78a, type: 3}
   targetObject: {fileID: 0}
   FamilyFishes: []
   indexForBoidToSpawn: 0

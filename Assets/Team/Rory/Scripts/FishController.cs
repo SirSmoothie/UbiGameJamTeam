@@ -10,7 +10,7 @@ public class FishController : MonoBehaviour, ICatchable
     public FishStatus fishStatus; 
     public void CatchFish()
     {
-        EventBus.Current.ChangeFoodCaughtAmount(sizeOfFish);
+        //EventBus.Current.ChangeFoodCaughtAmount(sizeOfFish);
         gameObject.SetActive(false);
     }
 

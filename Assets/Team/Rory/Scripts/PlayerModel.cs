@@ -16,6 +16,7 @@ public class PlayerModel : MonoBehaviour
     private bool moving;
     public bool dragOn;
     public float maxSpeed;
+    private float currentSpeed;
 
     public bool onLand;
     public bool playerControlled;
@@ -132,7 +133,10 @@ public class PlayerModel : MonoBehaviour
         //currentDirection = (currentDirection * speed);
         if (!onLand)
         {
-            rb.velocity = currentDirection * (maxSpeed * playerStats.ReturnWeightSpeedMultiplier());
+            var weightSpeed = playerStats.ReturnWeightSpeedMultiplier();
+            Debug.Log(weightSpeed);
+            currentSpeed = maxSpeed * weightSpeed;
+            rb.velocity = currentDirection * currentSpeed;
             if (currentDirection.z == Vector3.left.z)
             {
                 facingForward = false;
@@ -181,7 +185,8 @@ public class PlayerModel : MonoBehaviour
             //Debug.Log("ACTION ACTIVATE");
             var fish = netObject.transform.GetComponent<NetController>().CatchFish();
             if (fish == null) return;
-            PlayerInventory.Current.AddFishToInventory(fish.GetComponent<FishController>().ReturnFishStats());
+            FishStatus fishStatus = fish.GetComponent<FishController>().ReturnFishStats();
+            PlayerInventory.Current.AddFishToInventory(fishStatus);
         }
     }
 }

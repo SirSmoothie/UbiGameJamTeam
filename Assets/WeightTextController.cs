@@ -7,7 +7,7 @@ using UnityEngine;
 public class WeightTextController : MonoBehaviour
 {
     private TextMeshProUGUI textBox;
-    [SerializeField]private PlayerStats playerStats;
+    [SerializeField] private PlayerStats playerStats;
     private GameObject player;
     [SerializeField]private float weight = 0;
     private void Awake()
@@ -18,7 +18,7 @@ public class WeightTextController : MonoBehaviour
 
     public void PlayerUpdated()
     {
-        Debug.Log("Updated Player");
+        //Debug.Log("Updated Player");
         player = EventBus.Current.PlayerReference();
         playerStats = player.GetComponent<PlayerStats>();
         playerStats.UpdateWeightAmountEvent += UpdateText;

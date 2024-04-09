@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
 {
     public int sceneToLoad;
     public int MainSceneIndex;
+    public bool leadsToWater;
     public void Interacted(GameObject Player)
     {
         if (EventBus.Current.ReturnMainSceneBool())
@@ -21,7 +22,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
         {
             EventBus.Current.UpdateMainSceneBool(false);
         }
-        
+        EventBus.Current.ChangeInWaterBool(leadsToWater);
         //This must be last so the event bus can get the infomation before the scene loads, so everything in the next scene has the infomation it needs on awake.
         SceneManager.LoadScene(sceneToLoad);
     }

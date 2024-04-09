@@ -26,6 +26,8 @@ public class PlayerStats : MonoBehaviour
         {
             air = maxAir;
         }
+
+        inWater = EventBus.Current.ReturnInWaterBool();
     }
 
     private void Update()
@@ -63,13 +65,17 @@ public class PlayerStats : MonoBehaviour
         {
             weightSpeedMultiplier = 1f;
         }
-        else if (weight >= (maxWeight / 3)*2)
+        else if (weight >= (maxWeight / 6)*5 && weight <= maxWeight)
         {
-            weightSpeedMultiplier = 0.50f;
+            weightSpeedMultiplier = 0.40f;
+        }
+        else if(weight > maxWeight)
+        {
+            weightSpeedMultiplier = 0.10f;
         }
         else
         {
-            weightSpeedMultiplier = 0.75f;
+            weightSpeedMultiplier = 0.70f;
         }
     }
 

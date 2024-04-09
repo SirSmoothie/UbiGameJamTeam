@@ -17,24 +17,24 @@ public class PlayerInventory : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         } 
         
-        EventBus.Current.UpdatePlayerGameObjectEvent += PlayerUpdated;
     }
     public List<FishStatus> caughtFish;
     [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private GameObject player;
     [SerializeField] private float fishValueAmount;
 
     private void Start()
     {
-        //playerStats = GetComponent<PlayerStats>();
+        EventBus.Current.UpdatePlayerGameObjectEvent += PlayerUpdated;
     }
 
     public void PlayerUpdated()
     {
-        GameObject playerObject = EventBus.Current.PlayerReference();
-        Debug.Log("setting player stats in PlayerInventoryManager");
-        Debug.Log(playerObject);
-        playerStats = playerObject.transform.GetComponent<PlayerStats>();
-        Debug.Log(playerStats);
+        player = EventBus.Current.PlayerReference();
+        //Debug.Log("setting player stats in PlayerInventoryManager");
+        //Debug.Log(player);
+        playerStats = player.GetComponent<PlayerStats>();
+        //Debug.Log(playerStats);
     }
     public void AddFishToInventory(FishStatus fish)
     {
@@ -45,8 +45,9 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddWeightToPlayer(float weight)
     {
+        //Debug.Log("Trying to add the weight to the player stats");
         if (playerStats == null) return;
-        Debug.Log("adding the weight to the player stats");
+        //Debug.Log("adding the weight to the player stats");
         playerStats.ChangeWeightValue(weight);
     }
 
