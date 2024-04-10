@@ -20,8 +20,11 @@ public class CameraShakeManager : MonoBehaviour
         }
         
     }
-    
-    
+
+    public void UpdateGlobalShakeForce(float value)
+    {
+        globalShakeForce = value;
+    }
 
     public void CameraShake(CinemachineImpulseSource impulseSource)
     {

@@ -74,15 +74,15 @@ public class CardStamp : MonoBehaviour
             switch (part)
             {
                 case "fin":
-                    scoreChange = fishComponent.body.isPoisoned ? -10 : 10;
+                    scoreChange = fishComponent.body.isPoisoned ? 0 : 1;
                     partType = "fin";
                     break;
                 case "head":
-                    scoreChange = fishComponent.head.isPoisoned ? -10 : 10;
+                    scoreChange = fishComponent.head.isPoisoned ? 0 : 1;
                     partType = "head";
                     break;
                 case "tail":
-                    scoreChange = fishComponent.tail.isPoisoned ? -10 : 10;
+                    scoreChange = fishComponent.tail.isPoisoned ? 0 : 1;
                     partType = "tail";
                     break;
             }
@@ -105,15 +105,15 @@ public class CardStamp : MonoBehaviour
             switch (part)
             {
                 case "fin":
-                    scoreChange = fishComponent.body.isPoisoned ? 10 : -10;
+                    scoreChange = fishComponent.body.isPoisoned ? 0 : 0;
                     partType = "fin";
                     break;
                 case "head":
-                    scoreChange = fishComponent.head.isPoisoned ? 10 : -10;
+                    scoreChange = fishComponent.head.isPoisoned ? 0 : 0;
                     partType = "head";
                     break;
                 case "tail":
-                    scoreChange = fishComponent.tail.isPoisoned ? 10 : -10;
+                    scoreChange = fishComponent.tail.isPoisoned ? 0 : 0;
                     partType = "tail";
                     break;
             }
