@@ -163,7 +163,7 @@ MonoBehaviour:
     tailObject: {fileID: 2552038961417357611}
   head:
     nameOfBodyPart: 
-    isPoisoned: 0
+    isPoisoned: 1
     imageNumber: 0
     headObject: {fileID: 0}
   body:
