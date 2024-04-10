@@ -15,7 +15,7 @@ public class PlayerInventory : MonoBehaviour
         } else {
             _current = this;
             DontDestroyOnLoad(gameObject);
-        } 
+        }
         
     }
     public List<FishStatus> caughtFish;
@@ -26,8 +26,17 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         EventBus.Current.UpdatePlayerGameObjectEvent += PlayerUpdated;
+        EventBus.Current.SceneUpdatedEvent += SceneUpdated;
     }
 
+    public void SceneUpdated()
+    {
+        RemoveAllFish();
+    }
+    public void RemoveAllFish()
+    {
+        caughtFish = new List<FishStatus>();
+    }
     public void PlayerUpdated()
     {
         player = EventBus.Current.PlayerReference();
@@ -59,10 +68,19 @@ public class PlayerInventory : MonoBehaviour
     public void changeFishAmountValue(float value)
     {
         fishValueAmount += value;
+        TextUpdated();
+    }
+
+    public delegate void MoneyValueChanged();
+    public event MoneyValueChanged MoneyValueChangedEvent;
+    public void TextUpdated()
+    {
+        MoneyValueChangedEvent?.Invoke();
     }
     
     private void OnDestroy()
     {
         EventBus.Current.UpdatePlayerGameObjectEvent -= PlayerUpdated;
+        EventBus.Current.SceneUpdatedEvent -= SceneUpdated;
     }
 }

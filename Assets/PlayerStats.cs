@@ -26,7 +26,11 @@ public class PlayerStats : MonoBehaviour
         {
             air = maxAir;
         }
+        
+    }
 
+    private void Start()
+    {
         inWater = EventBus.Current.ReturnInWaterBool();
     }
 

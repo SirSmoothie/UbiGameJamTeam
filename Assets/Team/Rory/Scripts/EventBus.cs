@@ -28,6 +28,8 @@ public class EventBus : MonoBehaviour
     [SerializeField] private bool inWater;
     [SerializeField] private GameObject playerGameObject;
 
+    private bool introOn = true;
+
     public void ChangeInWaterBool(bool value)
     {
         inWater = value;
@@ -46,9 +48,13 @@ public class EventBus : MonoBehaviour
         return LocationInMainScene;
     }
 
+    public delegate void SceneUpdated();
+
+    public event SceneUpdated SceneUpdatedEvent;
     public void UpdateMainSceneBool(bool value)
     {
         inMainScene = value;
+        SceneUpdatedEvent?.Invoke();
     }
     public bool ReturnMainSceneBool()
     {
@@ -93,5 +99,14 @@ public class EventBus : MonoBehaviour
     {
         //Debug.Log("CallingEvent");
         UpdatePlayerGameObjectEvent?.Invoke();
+    }
+
+    public void UpdateIntroBool(bool value)
+    {
+        introOn = value;
+    }
+    public bool ReturnIntroBool()
+    {
+        return introOn;
     }
 }
