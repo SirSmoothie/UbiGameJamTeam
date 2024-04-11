@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348738619592786603, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.11
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3348738619592786603, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -762,6 +762,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7302537940007667120, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 382968571}
     - target: {fileID: 8022034758017635495, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
       propertyPath: minigameController
       value: 
@@ -769,32 +773,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 35533468058971255, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 309053601}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
 --- !u!1 &309053593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 35533468058971255, guid: 9695c4bf7c9a8854e88db30de73913ab, type: 3}
   m_PrefabInstance: {fileID: 309053592}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &309053601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309053593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505ffbad809ad9f4089d1b22252d99bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFade: 0
-  text: {fileID: 382968571}
-  fadeTime: 1
-  playerModel: {fileID: 0}
 --- !u!1 &311327807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1015,7 @@ MonoBehaviour:
   totalPoints: 0
   totalNegativePoints: 0
   fadeImage: {fileID: 823652475}
-  posToSpawn: {x: -150, y: -35, z: -600}
+  posToSpawn: {x: -150, y: -35, z: -650}
   minigame: {fileID: 318700624}
   shopUI: {fileID: 832398471}
   player: {fileID: 309053593}
@@ -2083,7 +2068,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823652475}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0

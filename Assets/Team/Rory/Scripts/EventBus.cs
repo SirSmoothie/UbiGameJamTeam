@@ -28,7 +28,7 @@ public class EventBus : MonoBehaviour
     [SerializeField] private bool inWater;
     [SerializeField] private GameObject playerGameObject;
 
-    private bool introOn = true;
+    [SerializeField] private bool introOn = true;
 
     public void ChangeInWaterBool(bool value)
     {

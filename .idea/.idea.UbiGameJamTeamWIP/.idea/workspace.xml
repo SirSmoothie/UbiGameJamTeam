@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FadeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FadeUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Run_Cycle_no_bg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Run_Cycle_no_bg.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinigameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoneyTextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoneyTextController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player On Land.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player On Land.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Guild.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Guild.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shopinterior.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shopinterior.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Prefabs/FishNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Charlie/Prefabs/FishNew.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,10 +104,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23900">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23900" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -146,7 +139,8 @@
       <workItem from="1712662832811" duration="1025000" />
       <workItem from="1712725020408" duration="6857000" />
       <workItem from="1712741239274" duration="4616000" />
-      <workItem from="1712807195076" duration="13167000" />
+      <workItem from="1712807195076" duration="13536000" />
+      <workItem from="1712835061489" duration="2336000" />
     </task>
     <servers />
   </component>

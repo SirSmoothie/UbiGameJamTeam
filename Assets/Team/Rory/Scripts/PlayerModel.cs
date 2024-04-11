@@ -36,6 +36,7 @@ public class PlayerModel : MonoBehaviour
 
     public GameObject PlayerGameObject;
     private InteractTextPopup playerInteractPopup;
+    public Animator playerAnimator;
     private void Awake()
     {
         if (EventBus.Current != null)
@@ -86,6 +87,14 @@ public class PlayerModel : MonoBehaviour
 
     void Update()
     {
+        if (currentDirection.x < 0)
+        {
+            playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (currentDirection.x > 0)
+        {
+            playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = false;
+        }
         if (onLand)
         {
             rb.useGravity = true;
@@ -151,6 +160,7 @@ public class PlayerModel : MonoBehaviour
         else
         {
             rb.velocity = new Vector3(currentDirection.x * maxSpeed, rb.velocity.y,0);
+            playerAnimator.SetFloat("Speed", Mathf.Abs(currentDirection.x));
         }
         //Debug.Log(rb.velocity.magnitude);
     }
