@@ -6,18 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FadeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FadeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Run_Cycle_no_bg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Run_Cycle_no_bg.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinigameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MoneyTextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoneyTextController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player On Land.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player On Land.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Guild.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Guild.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shopinterior.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shopinterior.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Prefabs/FishNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Charlie/Prefabs/FishNew.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +28,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24e1ed8728684ea3ae446f80787d18de954a00/49/e22dbf47/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraRotator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FadeTriggerHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishTurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthSliderController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractTextPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IntroController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MoneyTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NetController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,11 +45,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InspectObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SlotMachineEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StartMinigame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Team/Charlie/Scripts 1/Fish.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Team/Rory/Scripts/ICatchable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Team/Rory/SlotMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WeightTextController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_EventManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -108,10 +111,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23900">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23900" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -142,6 +145,8 @@
       <workItem from="1712557221544" duration="22659000" />
       <workItem from="1712662832811" duration="1025000" />
       <workItem from="1712725020408" duration="6857000" />
+      <workItem from="1712741239274" duration="4616000" />
+      <workItem from="1712807195076" duration="13167000" />
     </task>
     <servers />
   </component>
@@ -163,5 +168,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CardController.cs</url>
+          <line>150</line>
+          <properties documentPath="D:\GameProjects\UbiGameJamTeamWIP\Assets\CardController.cs" initialLine="150" containingFunctionPresentation="Method 'EvaluateFish'">
+            <startOffsets>
+              <option value="3700" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3723" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

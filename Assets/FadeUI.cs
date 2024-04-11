@@ -23,22 +23,22 @@ public class FadeUI : MonoBehaviour
         {
             if (fadeIn)
             {
-                canvasGroup.DOFade(0, fadeSpeed);
+                canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
             }
             else
             {
-                canvasGroup.DOFade(1, fadeSpeed);
+                canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
             }
         }
         if (!fadeOn)
         {
             if (fadeIn)
             {
-                canvasGroup.DOFade(1, fadeSpeed);
+                canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
             }
             else
             {
-                canvasGroup.DOFade(0, fadeSpeed);
+                canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
             }
         }
     }

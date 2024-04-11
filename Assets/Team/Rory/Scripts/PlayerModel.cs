@@ -35,6 +35,7 @@ public class PlayerModel : MonoBehaviour
     public GameObject hitBox;
 
     public GameObject PlayerGameObject;
+    private InteractTextPopup playerInteractPopup;
     private void Awake()
     {
         if (EventBus.Current != null)
@@ -43,16 +44,17 @@ public class PlayerModel : MonoBehaviour
             {
                 gameObject.transform.position = EventBus.Current.ReturnOldLocation();
             }
-        
-            interactingOn = EventBus.Current.ReturnInteracting();
-            playerControlled = EventBus.Current.ReturnPlayerControl();
+            
         }
     }
 
     private void Start()
     {
+        interactingOn = EventBus.Current.ReturnInteracting();
+        playerControlled = EventBus.Current.ReturnPlayerControl();
         EventBus.Current.IAmThePlayer(PlayerGameObject);
         playerStats = gameObject.GetComponent<PlayerStats>();
+        playerInteractPopup = GetComponent<InteractTextPopup>();
     }
 
     public void PlayerControlled(bool value)
@@ -174,6 +176,7 @@ public class PlayerModel : MonoBehaviour
             if (CurrentTrigger == null) return;
             IInteractable Object = CurrentTrigger.transform.GetComponent<IInteractable>();
             Object.Interacted(gameObject);
+            //playerInteractPopup.RemoveText();
         }
     }
 
@@ -187,6 +190,7 @@ public class PlayerModel : MonoBehaviour
             if (fish == null) return;
             FishStatus fishStatus = fish.GetComponent<FishController>().ReturnFishStats();
             PlayerInventory.Current.AddFishToInventory(fishStatus);
+            
         }
     }
 }

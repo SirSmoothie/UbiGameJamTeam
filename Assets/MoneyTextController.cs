@@ -8,13 +8,9 @@ public class MoneyTextController : MonoBehaviour
 {
     public TextMeshProUGUI text;
 
-    private void Awake()
-    {
-        PlayerInventory.Current.MoneyValueChangedEvent += NewUpdate;
-    }
-
     private void Start()
     {
+        PlayerInventory.Current.MoneyValueChangedEvent += NewUpdate;
         NewUpdate();
     }
 
