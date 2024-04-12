@@ -6,17 +6,74 @@
   <component name="ChangeListManager">
     <list default="true" id="b33663e0-2e85-4de4-aea5-0d161be4b964" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UbiGameJamTeamWIP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SpawnEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SpawnEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FadeTriggerHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FadeTriggerHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FadeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FadeUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IntroController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IntroController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinigameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NetController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FadeUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FadeUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player On Land.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player On Land.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/BetterBoidAvoidEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/BetterBoidAvoidEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRoridsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rorids/rory/SpawnRoridsEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Guild.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Guild.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editors/InspectObjectEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editors/InspectObjectEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Ultra_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Ultra_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SlotMachineEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SlotMachineEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Prefabs/FishNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Charlie/Prefabs/FishNew.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts 1/Fish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts 1/Fish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/AIEyes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/AIEyes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Alignment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Alignment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Avoid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Avoid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Cohesian.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Cohesian.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Float.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Float.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Forward.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Forward.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/MoveForward.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/MoveForward.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Neighbours Raycast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Neighbours Raycast.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Neighbours.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Neighbours.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Perception.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Perception.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/PerceptionRadius.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/PerceptionRadius.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Seperation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Seperation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Spawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/Spawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/TurnTowards.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/TurnTowards.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/WanderLeftToRight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/WanderLeftToRight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/WanderUpNDown.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Charlie/Scripts/WanderUpNDown.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishBody1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishBody1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishBody2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishBody2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishHead2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishHead2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishTail1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishTail1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishTail2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/FishTail2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/Fishhead1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Noelle/fish12.04/Fishhead1.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/EventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Team/Rory/Scripts/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +87,18 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24e1ed8728684ea3ae446f80787d18de954a00/49/e22dbf47/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CameraRotator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DayTextChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DeathController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DropPodIntroController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FadeTriggerHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishTurn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FootStepAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthSliderController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InteractTextPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IntroController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MoneyTextController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MusicPlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NetController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerTutorial.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,6 +149,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../UbisoftGameJam_CeramicAnvil\UbiGameJamTeamWIP.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\GameProjects\UbisoftGameJam_CeramicAnvil" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.21f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\GameProjects\UbiGameJamTeamWIP -debugCodeOptimization" />
@@ -152,7 +220,7 @@
       <workItem from="1712741239274" duration="4616000" />
       <workItem from="1712807195076" duration="13536000" />
       <workItem from="1712835061489" duration="2336000" />
-      <workItem from="1712896935547" duration="7823000" />
+      <workItem from="1712896935547" duration="26619000" />
     </task>
     <servers />
   </component>

@@ -1015,7 +1015,7 @@ MonoBehaviour:
   totalPoints: 0
   totalNegativePoints: 0
   fadeImage: {fileID: 823652475}
-  posToSpawn: {x: -150, y: -35, z: -650}
+  posToSpawn: {x: -1264, y: -736.6, z: -352}
   minigame: {fileID: 318700624}
   shopUI: {fileID: 832398471}
   player: {fileID: 309053593}

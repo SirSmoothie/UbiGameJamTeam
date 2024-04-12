@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] private int dayNumber = 1;
     [SerializeField] private int weekLength = 3;
-    [SerializeField] private int weekNumber = 3;
+    [SerializeField] private int weekNumber = 1;
     private bool survivedWeek;
     
     private static TimeManager _current;
@@ -38,7 +39,6 @@ public class TimeManager : MonoBehaviour
 
     public void EndWeek()
     {
-        dayNumber = 1;
         StartCoroutine(EndWeekRoutine());
     }
     public int ReturnDayNumber()
@@ -71,12 +71,14 @@ public class TimeManager : MonoBehaviour
     {
         InactFade();
         yield return new WaitForSeconds(1f);
+        EventBus.Current.HasExplored(false);
         
         yield return new WaitForSeconds(1f);
         UnInactFade();
     }
     IEnumerator EndWeekRoutine()
     {
+        
         InactFade();
         ChangeWeek();
         yield return new WaitForSeconds(1f);
@@ -84,15 +86,16 @@ public class TimeManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (survivedWeek == false)
         {
-            
+            SceneManager.LoadScene("PlayerLost");
             yield break;
         }
 
         if (survivedWeek)
         {
+            dayNumber = 1;
+            weekNumber++;
             UnInactFade();
             survivedWeek = false;
-            weekNumber++;
         }
     }
     

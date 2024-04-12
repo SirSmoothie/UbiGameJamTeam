@@ -23,6 +23,7 @@ public class FadeUI : MonoBehaviour
         else
         {
             canvasGroup.alpha = 1;
+            SetFadeTofalse();
         }
         
         TimeManager.Current.startFadingEvent += SetFadeToTrue;
@@ -31,37 +32,39 @@ public class FadeUI : MonoBehaviour
 
     void Update()
     {
-        if (fadeOn)
-        {
-            if (fadeIn)
-            {
-                canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
-            }
-            else
-            {
-                canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
-            }
-        }
-        if (!fadeOn)
-        {
-            if (fadeIn)
-            {
-                canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
-            }
-            else
-            {
-                canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
-            }
-        }
+        //if (fadeOn)
+        //{
+        //    if (fadeIn)
+        //    {
+        //        canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
+        //    }
+        //    else
+        //    {
+        //        canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
+        //    }
+        //}
+        //if (!fadeOn)
+        //{
+        //    if (fadeIn)
+        //    {
+        //        canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
+        //    }
+        //    else
+        //    {
+        //        canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
+        //    }
+        //}
     }
 
     public void SetFadeToTrue()
     {
-        fadeOn = true;
+        //fadeOn = true;
+        canvasGroup.DOFade(1, fadeSpeed).SetEase(Ease.Linear);
     }
     public void SetFadeTofalse()
     {
-        fadeOn = true;
+        //fadeOn = true;
+        canvasGroup.DOFade(0, fadeSpeed).SetEase(Ease.Linear);
     }
     public void UpdateFadeOnBool(bool value)
     {

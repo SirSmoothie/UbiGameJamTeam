@@ -51,10 +51,10 @@ public class PlayerInventory : MonoBehaviour
     public void PlayerUpdated()
     {
         player = EventBus.Current.PlayerReference();
-        //Debug.Log("setting player stats in PlayerInventoryManager");
-        //Debug.Log(player);
+        Debug.Log("setting player stats in PlayerInventoryManager");
+        Debug.Log(player);
         playerStats = player.GetComponent<PlayerStats>();
-        //Debug.Log(playerStats);
+        Debug.Log(playerStats);
     }
     public void AddFishToInventory(FishStatus fish)
     {
@@ -65,9 +65,9 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddWeightToPlayer(float weight)
     {
-        //Debug.Log("Trying to add the weight to the player stats");
+        Debug.Log("Trying to add the weight to the player stats");
         if (playerStats == null) return;
-        //Debug.Log("adding the weight to the player stats");
+        Debug.Log("adding the weight to the player stats");
         playerStats.ChangeWeightValue(weight);
     }
 

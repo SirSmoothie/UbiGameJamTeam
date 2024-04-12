@@ -11,7 +11,7 @@ public class FadeTriggerHelper : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            fadeUI.UpdateFadeOnBool(true);
+            fadeUI.SetFadeToTrue();
         }
     }
 
@@ -19,7 +19,7 @@ public class FadeTriggerHelper : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            fadeUI.UpdateFadeOnBool(false);
+            fadeUI.SetFadeTofalse();
         }
     }
 }

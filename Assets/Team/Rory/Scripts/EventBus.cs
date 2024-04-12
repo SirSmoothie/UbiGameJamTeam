@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +19,12 @@ public class EventBus : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         } 
     }
-    
+
+    private void Start()
+    {
+        DOTween.SetTweensCapacity(500,50);
+    }
+
     [SerializeField] private int foodValue;
     [SerializeField] private int fishCaught;
 
@@ -31,6 +38,17 @@ public class EventBus : MonoBehaviour
 
     [SerializeField] private bool introOn = true;
 
+    [SerializeField] private bool HasExploredToday;
+
+    public void HasExplored(bool value)
+    {
+        HasExploredToday = value;
+    }
+
+    public bool ReturnExploredBool()
+    {
+        return HasExploredToday;
+    }
     public void ChangeInWaterBool(bool value)
     {
         inWater = value;
@@ -81,24 +99,24 @@ public class EventBus : MonoBehaviour
 
     public void IAmThePlayer(GameObject playerObject)
     {
-        //Debug.Log("Player Set In Game Manager");
+        Debug.Log("Player Set In Game Manager");
         playerGameObject = playerObject;
-        //Debug.Log(playerObject.transform);
-        //Debug.Log(playerGameObject.transform);
+        Debug.Log(playerObject.transform);
+        Debug.Log(playerGameObject.transform);
         UpdatePlayerObject();
 
     }
     public GameObject PlayerReference()
     {
-        //Debug.Log("returned from Game Manager");
-        //Debug.Log(playerGameObject);
+        Debug.Log("returned from Game Manager");
+        Debug.Log(playerGameObject);
         return playerGameObject;
     }
     public delegate void UpdatePlayerGameObject();
     public event UpdatePlayerGameObject UpdatePlayerGameObjectEvent;
     public void UpdatePlayerObject()
     {
-        //Debug.Log("CallingEvent");
+        Debug.Log("CallingEvent");
         UpdatePlayerGameObjectEvent?.Invoke();
     }
 

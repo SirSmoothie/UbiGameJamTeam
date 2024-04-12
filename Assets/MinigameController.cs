@@ -32,6 +32,10 @@ public class MinigameController : MonoBehaviour
         {
             playedToday = true;
         }
+        else
+        {
+            playedToday = false;
+        }
     }
 
     private void OnDestroy()
@@ -54,6 +58,7 @@ public class MinigameController : MonoBehaviour
         {
             amountOfFish--;
             generatedFish = Instantiate(newFish, posToSpawn, Quaternion.identity, transform);
+            generatedFish.transform.localPosition = posToSpawn;
         }
         else
         {

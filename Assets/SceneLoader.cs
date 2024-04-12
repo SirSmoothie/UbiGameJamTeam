@@ -11,6 +11,15 @@ public class SceneLoader : MonoBehaviour, IInteractable
     public GameObject fadeUI;
     public void Interacted(GameObject Player)
     {
+        if (EventBus.Current.ReturnExploredBool() && leadsToWater)
+        {
+            return;
+        }
+
+        if (leadsToWater)
+        {
+            EventBus.Current.HasExplored(true);
+        }
         if (EventBus.Current.ReturnMainSceneBool())
         {
             EventBus.Current.UpdateMainSceneLocation(Player.transform.position);
@@ -25,7 +34,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
         }
         EventBus.Current.ChangeInWaterBool(leadsToWater);
         //This must be last so the event bus can get the infomation before the scene loads, so everything in the next scene has the infomation it needs on awake.
-        SceneManager.LoadScene(sceneToLoad);
+        StartCoroutine(SceneToLoadRoutine());
     }
 
     public void StopInteract()

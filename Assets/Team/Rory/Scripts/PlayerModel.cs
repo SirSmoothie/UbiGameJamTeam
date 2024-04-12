@@ -37,6 +37,7 @@ public class PlayerModel : MonoBehaviour
     public GameObject PlayerGameObject;
     private InteractTextPopup playerInteractPopup;
     public Animator playerAnimator;
+    private FootStepAudio footStepAudio;
     private void Awake()
     {
         if (EventBus.Current != null)
@@ -51,6 +52,7 @@ public class PlayerModel : MonoBehaviour
 
     private void Start()
     {
+        footStepAudio = GetComponent<FootStepAudio>();
         interactingOn = EventBus.Current.ReturnInteracting();
         playerControlled = EventBus.Current.ReturnPlayerControl();
         EventBus.Current.IAmThePlayer(PlayerGameObject);
@@ -87,14 +89,37 @@ public class PlayerModel : MonoBehaviour
 
     void Update()
     {
-        if (currentDirection.x < 0)
+        if (playerAnimator != null)
         {
-            playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = true;
+            if (onLand)
+            {
+                if (currentDirection.x < 0)
+                {
+
+                    playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = true;
+                }
+
+                if (currentDirection.x > 0)
+                {
+                    playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = false;
+                }
+            }
+            else
+            {
+                if (currentDirection.x < 0)
+                {
+
+                    playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = true;
+                }
+
+                if (currentDirection.x > 0)
+                {
+                    playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                
+            }
         }
-        if (currentDirection.x > 0)
-        {
-            playerAnimator.transform.GetComponent<SpriteRenderer>().flipX = false;
-        }
+
         if (onLand)
         {
             rb.useGravity = true;
@@ -103,7 +128,8 @@ public class PlayerModel : MonoBehaviour
         {
             rb.useGravity = false;
         }
-        currentDirection = new Vector3(desiredDirection.x, desiredDirection.y, 0);
+            currentDirection = new Vector3(desiredDirection.x, desiredDirection.y, 0);
+       
         
         if (dragOn)
         {
@@ -141,26 +167,47 @@ public class PlayerModel : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!playerControlled)
+        {
+            rb.velocity = Vector3.zero;
+        }
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetFloat("Speed", Mathf.Abs(currentDirection.x) + Mathf.Abs(currentDirection.y));
+        }
+
         //currentDirection = (currentDirection * speed);
         if (!onLand)
         {
-            var weightSpeed = playerStats.ReturnWeightSpeedMultiplier();
-            Debug.Log(weightSpeed);
-            currentSpeed = maxSpeed * weightSpeed;
-            rb.velocity = currentDirection * currentSpeed;
-            if (currentDirection.z == Vector3.left.z)
+            if (playerControlled)
             {
-                facingForward = false;
-            }
-            if (currentDirection.z == Vector3.right.z)
-            {
-                facingForward = true;
+                var weightSpeed = playerStats.ReturnWeightSpeedMultiplier();
+                //Debug.Log(weightSpeed);
+                currentSpeed = maxSpeed * weightSpeed;
+                rb.velocity = currentDirection * currentSpeed;
+                footStepAudio.PlayFootStepAudio();
+                //if (currentDirection.z == Vector3.left.z)
+                //{
+                //    facingForward = false;
+                //}
+                //if (currentDirection.z == Vector3.right.z)
+                //{
+                //    facingForward = true;
+                //}
             }
         }
         else
         {
+            if (currentDirection.x != 0)
+            {
+                footStepAudio.PlayFootStepAudio();
+            }
+
+            if (currentDirection.x == 0)
+            {
+                footStepAudio.StopFootstepAudio();
+            }
             rb.velocity = new Vector3(currentDirection.x * maxSpeed, rb.velocity.y,0);
-            playerAnimator.SetFloat("Speed", Mathf.Abs(currentDirection.x));
         }
         //Debug.Log(rb.velocity.magnitude);
     }
