@@ -56,7 +56,9 @@ public class PlayerStats : MonoBehaviour
             air -= Time.deltaTime;
             if (air <= 0)
             {
-                //you drowned...
+                Drowned();
+                gameObject.GetComponent<PlayerModel>().playerControlled = false;
+                gameObject.GetComponent<PlayerModel>().interactingOn = false;
             }
         }
         else
@@ -82,7 +84,10 @@ public class PlayerStats : MonoBehaviour
             weightSpeedMultiplier = 0.70f;
         }
     }
-
+    public void Drowned()
+    {
+        EventBus.Current.PlayerDrowned();
+    }
     public float ReturnWeightSpeedMultiplier()
     {
         return weightSpeedMultiplier;

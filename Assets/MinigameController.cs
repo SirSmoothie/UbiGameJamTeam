@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -20,7 +21,24 @@ public class MinigameController : MonoBehaviour
     public GameObject player;
 
     public bool playedToday;
+    public int DayPlayed;
     public GameObject interactText;
+
+    private void Start()
+    {
+        int tempDay;
+        tempDay = TimeManager.Current.ReturnDayNumber();
+        if (tempDay == DayPlayed)
+        {
+            playedToday = true;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        
+    }
+
     public Fish ReturnFishData()
     {
         return generatedFish;
@@ -56,6 +74,7 @@ public class MinigameController : MonoBehaviour
     {
         StartCoroutine(StartMinigameWithFade());
         playedToday = true;
+        DayPlayed = TimeManager.Current.ReturnDayNumber();
     }
     IEnumerator StartMinigameWithFade()
     {

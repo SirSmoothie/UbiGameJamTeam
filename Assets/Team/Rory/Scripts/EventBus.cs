@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventBus : MonoBehaviour
 {
@@ -108,5 +109,10 @@ public class EventBus : MonoBehaviour
     public bool ReturnIntroBool()
     {
         return introOn;
+    }
+
+    public void PlayerDrowned()
+    {
+        SceneManager.LoadScene("PlayerLost");
     }
 }

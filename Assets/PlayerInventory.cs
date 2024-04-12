@@ -27,6 +27,17 @@ public class PlayerInventory : MonoBehaviour
     {
         EventBus.Current.UpdatePlayerGameObjectEvent += PlayerUpdated;
         EventBus.Current.SceneUpdatedEvent += SceneUpdated;
+        TimeManager.Current.EndOfWeekEvent += EvaluateFood;
+    }
+
+    public void EvaluateFood()
+    {
+        int weekNumber = TimeManager.Current.ReturnWeekNumber();
+        if (fishValueAmount >= weekNumber * 5)
+        {
+            fishValueAmount -= weekNumber * 5;
+            TimeManager.Current.SurvivedWeek();
+        }
     }
 
     public void SceneUpdated()

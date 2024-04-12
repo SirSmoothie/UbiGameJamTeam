@@ -8,6 +8,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
     public int sceneToLoad;
     public int MainSceneIndex;
     public bool leadsToWater;
+    public GameObject fadeUI;
     public void Interacted(GameObject Player)
     {
         if (EventBus.Current.ReturnMainSceneBool())
@@ -30,5 +31,12 @@ public class SceneLoader : MonoBehaviour, IInteractable
     public void StopInteract()
     {
         throw new System.NotImplementedException();
+    }
+
+    IEnumerator SceneToLoadRoutine()
+    {
+        fadeUI.GetComponent<FadeUI>().SetFadeToTrue();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

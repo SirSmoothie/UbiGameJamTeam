@@ -27,6 +27,7 @@ public class IntroController : MonoBehaviour
         FindIntroBool();
         if (playAnimation)
         {
+            gameObject.GetComponent<PlayerModel>().playerControlled = false;
             StartCoroutine(IntroAnimation());
         }
     }
@@ -51,6 +52,7 @@ public class IntroController : MonoBehaviour
         CameraShakeManager.Current.UpdateGlobalShakeForce(bigLandingForce);
         CameraShakeManager.Current.CameraShake(impulseSourceBigLanding);
         EventBus.Current.UpdateIntroBool(false);
+        gameObject.GetComponent<PlayerModel>().playerControlled = true;
     }
     
     public void OnDestroy()

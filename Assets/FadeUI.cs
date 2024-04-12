@@ -7,14 +7,26 @@ using UnityEngine;
 public class FadeUI : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
-    public float fadeSpeed;
+    public float fadeSpeed = 1;
     public bool fadeIn;
     [SerializeField] private bool fadeOn;
+
+    public bool IsMoneyUI;
 
     private void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        canvasGroup.alpha = 0;
+        if (IsMoneyUI)
+        {
+            canvasGroup.alpha = 0;
+        }
+        else
+        {
+            canvasGroup.alpha = 1;
+        }
+        
+        TimeManager.Current.startFadingEvent += SetFadeToTrue;
+        TimeManager.Current.startUnFadingEvent += SetFadeTofalse;
     }
 
     void Update()
@@ -43,8 +55,22 @@ public class FadeUI : MonoBehaviour
         }
     }
 
+    public void SetFadeToTrue()
+    {
+        fadeOn = true;
+    }
+    public void SetFadeTofalse()
+    {
+        fadeOn = true;
+    }
     public void UpdateFadeOnBool(bool value)
     {
         fadeOn = value;
+    }
+
+    private void OnDestroy()
+    {
+        TimeManager.Current.startFadingEvent -= SetFadeToTrue;
+        TimeManager.Current.startUnFadingEvent -= SetFadeTofalse;
     }
 }
