@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper_Group_2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 628100025220143016, guid: 5aaf57c36abdcfb4fb2fcaae655a799d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 717904950058035930, guid: 5aaf57c36abdcfb4fb2fcaae655a799d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2

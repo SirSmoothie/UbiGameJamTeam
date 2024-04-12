@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4526645178798415011, guid: 8a152f8ea16ee724b842ea650900717a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8230709384889917440, guid: 8a152f8ea16ee724b842ea650900717a, type: 3}
       propertyPath: m_Name
       value: Paper_Group_3 Variant
