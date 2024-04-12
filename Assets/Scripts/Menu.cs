@@ -10,6 +10,20 @@ public class Menu : MonoBehaviour
     public bool isCredits;
     public bool isQuit;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite hSprite;
+    public Sprite nhSprite;
+
+    public void OnMouseOver()
+    {
+        spriteRenderer.sprite = hSprite;
+    }
+
+    private void OnMouseExit()
+    {
+        spriteRenderer.sprite = nhSprite;
+    }
+
     private void OnMouseUpAsButton()
     {
         if (isStart)
@@ -19,7 +33,7 @@ public class Menu : MonoBehaviour
 
         if (isCredits)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Credits");
         }
 
         if (isQuit)
